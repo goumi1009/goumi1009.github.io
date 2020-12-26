@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   // 모바일 메뉴 버튼 클릭 이벤트
   $('.btn-m-toggle').on('click', function () {
     $('.header').toggleClass('active');
@@ -24,7 +23,17 @@ $(document).ready(function () {
       $(this).next('.ac-con').slideUp();
     }
   });
-  
+
+  var fileTarget = $('.attach-file #ifile_PC'); 
+  fileTarget.on('change', function () {
+    if(window.FileReader){ // modern browser 
+      var filename = $(this)[0].files[0].name; 
+    } else { // old IE 
+      var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출 } // 추출한 파일명 삽입 
+    }
+    $(this).siblings('.file-name').text(filename); 
+  });
+
 })
 
 // 브라우저 resize 
