@@ -27,11 +27,13 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="/js/layout.js"></script>
 
+  <script src="/js/slick.js"></script>
+  <link rel="stylesheet" href="/css/slick.css">
   <link rel="stylesheet" href="/css/sub.css">
 </head>
 
 <body>
-  <div class="fp-back wrap login-wrap">
+  <div class="wrap sub-wrap apply_sample">
     <header class="header">
       <nav class="hd-navbar">
         <h1 class="hd-logo"><a href="/index.html">해와달</a></h1>
@@ -44,9 +46,9 @@
           <ul class="hd-util">
             <li class="hd-login">
               <p class="mobile">로그인 후 해와달 모든 서비스를 이용하세요!</p>
-              <a href="/sub/user_login.html">로그인</a>
+              <a href="/Login/user_login.html">로그인</a>
             </li>
-            <li class="hd-signup"><a href="/sub/user_register.html">회원가입</a></li>
+            <li class="hd-signup"><a href="/Login/user_register.html">회원가입</a></li>
             <!-- <li class="hd-login">
               <p class="mobile">홍길동님 반갑습니다!</p>
               <a href="">로그아웃</a>
@@ -55,8 +57,8 @@
           <div class="mobile footer">
             <ul class="list-info">
               <li><a href="">고객문의</a></li>
-              <li><a href="">이용약관</a></li>
-              <li><a href="">개인정보처리방침</a></li>
+              <li><a href="javascript:popupLoad('terms');">이용약관</a></li>
+              <li><a href="javascript:popupLoad('terms');">개인정보처리방침</a></li>
             </ul>
             <button class="btn-top">TOP</button>
             <p class="ft-logo"><img src="/images/common/ft-logo.png" alt="해와달 로고" /></p>
@@ -75,42 +77,68 @@
         <span class="bar"></span>
       </button>
     </header>
-    <section class="form-box">
-      <div class="box-head">
-        <h2><strong>로그인  후</strong>해와달 이용이 가능합니다.</h2>
+    <main class="container">
+      <header class="visual">
+        <div class="visual-inner">
+          <h2>샘플보기</h2>
+          <p>샘플보기샘플보기샘플보기샘플보기샘플보기샘플보기샘플보기</p>
+        </div>
+      </header>
+      <div class="contents-wrap">
+        <div class="contents sample-list">
+          <h3>부고장</h3>
+          <ul class="obituary">
+            <li>
+              <h4>Basic</h4>
+              <img src="/images/sub/apply_sample-item1-1.png" alt="">
+              <button type="button" class="btn" onclick="javascript:popupLoad('prev_obituary', 0)">샘플보기</button>
+            </li>
+            <li>
+              <h4>Black</h4>
+              <img src="/images/sub/apply_sample-item1-2.png" alt="">
+              <button type="button" class="btn" onclick="javascript:popupLoad('prev_obituary', 1)">샘플보기</button>
+            </li>
+            <li>
+              <h4>White</h4>
+              <img src="/images/sub/apply_sample-item1-3.png" alt="">
+              <button type="button" class="btn" onclick="javascript:popupLoad('prev_obituary', 2)">샘플보기</button>
+            </li>
+          </ul>
+        </div>
+        <div class="contents sample-list ">
+          <h3>테마색상</h3>
+          <ul class="theme">
+            <li>
+              <h4>Black</h4>
+              <img src="/images/sub/apply_sample-item2-1.png" alt="">
+              <button type="button" class="btn" onclick="javascript:popupLoad('prev_theme', 0)">샘플보기</button>
+            </li>
+            <li>
+              <h4>White</h4>
+              <img src="/images/sub/apply_sample-item2-2.png" alt="">
+              <button type="button" class="btn" onclick="javascript:popupLoad('prev_theme', 1)">샘플보기</button>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="box-body">
-        <form action="">
-          <fieldset>
-            <legend class="blind">해와달 로그인</legend>
-            <div class="form-row">
-              <div class="input-wrap">
-                <label for="u-id" class="blind">해와달 아이디 (이메일주소)</label>
-                <input id="u-id" type="email" placeholder="해와달 아이디 (이메일주소)" />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="input-wrap">
-                <label for="u-pw" class="blind">비밀번호</label>
-                <input id="u-pw" type="password" placeholder="비밀번호">
-              </div>
-            </div>
-            <div class="form-row sp-btw">
-              <a href="/sub/user_find.html">아이디/비밀번호 찾기</a>
-              <div class="input-wrap input-chk">
-                <input type="checkbox" id="keep" />
-                <label for="keep">아이디저장</label>
-              </div>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-      <div class="box-foot">
-        <button class="btn btn-major">로그인</button>
-        <button class="btn" type="button" onclick="location.href='/sub/user_register.html'">회원가입</button>
-      </div>
-    </section>
+    </main>
+    <footer class="footer">
+      <ul class="list-info">
+        <li><a href="">고객문의</a></li>
+        <li><a href="javascript:popupLoad('terms');">이용약관</a></li>
+        <li><a href="javascript:popupLoad('terms');">개인정보처리방침</a></li>
+      </ul>
+      <button class="btn-top">TOP</button>
+      <p class="ft-logo"><img src="/images/common/ft-logo.png" alt="해와달 로고" /></p>
+      <address class="address-info">
+        <span>㈜에이튜드</span>
+        <span>대표 임재범</span>
+        <span>사업자등록번호 731-86-00258</span>
+        <span>고객센터 02-586-2589</span>
+        <span>서울시 서초구 사임당로 17길 99, 하이센스빌딩 4층</span>
+      </address>
+      <small class="txt-copyright">COPYRIGHT(C) 2020 SUN AND MOON. ALL RIGHTS RESERVED</small>
+    </footer>
   </div>
 </body>
-
 </html>

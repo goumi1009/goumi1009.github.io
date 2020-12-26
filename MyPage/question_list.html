@@ -27,11 +27,13 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="/js/layout.js"></script>
 
+  <script src="/js/slick.js"></script>
+  <link rel="stylesheet" href="/css/slick.css">
   <link rel="stylesheet" href="/css/sub.css">
 </head>
 
 <body>
-  <div class="fp-back wrap login-wrap user-find">
+  <div class="wrap sub-wrap">
     <header class="header">
       <nav class="hd-navbar">
         <h1 class="hd-logo"><a href="/index.html">해와달</a></h1>
@@ -44,9 +46,9 @@
           <ul class="hd-util">
             <li class="hd-login">
               <p class="mobile">로그인 후 해와달 모든 서비스를 이용하세요!</p>
-              <a href="/sub/user_login.html">로그인</a>
+              <a href="/Login/user_login.html">로그인</a>
             </li>
-            <li class="hd-signup"><a href="/sub/user_register.html">회원가입</a></li>
+            <li class="hd-signup"><a href="/Login/user_register.html">회원가입</a></li>
             <!-- <li class="hd-login">
               <p class="mobile">홍길동님 반갑습니다!</p>
               <a href="">로그아웃</a>
@@ -55,8 +57,8 @@
           <div class="mobile footer">
             <ul class="list-info">
               <li><a href="">고객문의</a></li>
-              <li><a href="">이용약관</a></li>
-              <li><a href="">개인정보처리방침</a></li>
+              <li><a href="javascript:popupLoad('terms');">이용약관</a></li>
+              <li><a href="javascript:popupLoad('terms');">개인정보처리방침</a></li>
             </ul>
             <button class="btn-top">TOP</button>
             <p class="ft-logo"><img src="/images/common/ft-logo.png" alt="해와달 로고" /></p>
@@ -75,76 +77,61 @@
         <span class="bar"></span>
       </button>
     </header>
-      <section class="form-box">
-        <div class="box-head">
-          <h2><strong>아이디 찾기</strong></h2>
-          <p>회원가입시 입력한 이름과 핸드폰 번호를 입력하세요.</p>
+    <main class="container">
+      <header class="visual">
+        <div class="visual-inner">
+          <h2>마이페이지</h2>
+          <p>회원정보 변경 및 신청내역 수정이 가능합니다.</p>
         </div>
-        <div class="box-body">
-          <form action="">
-            <fieldset>
-              <legend class="blind">회원정보</legend>
-              <div class="form-row">
-                <div class="input-wrap">
-                  <label for="u-name" class="blind">이름</label>
-                  <input id="u-name" type="text" placeholder="이름" />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="input-wrap">
-                  <label for="u-phone" class="blind">핸드폰번호 (숫자만입력)</label>
-                  <input id="u-phone" type="text" placeholder="핸드폰번호 (숫자만입력)" />
-                </div>
-              </div>
-            </fieldset>
-          </form>
-          <div class="result">
-            <p>회원님의 아이디(이메일)는 <br /><em>test2312@atude.co.kr</em>입니다.</p>
+      </header>
+      <div class="contents-wrap">
+        <h3>1:1 문의</h3>
+        <div class="grid-box-wrap board-list">
+          <div class="grid-box">
+            <em class="state">답변대기</em>
+            <h4 class="title">제목이 들어갑니다</h4>
+            <div class="grid-con">
+              <p>문의 드릴게 있습니다. 문의 드릴게 있습니다. 문의 드릴게 있습니다. 문의 드릴게 있습니다. </p>
+            </div>
+            <div class="grid-btm">
+              <a href="" class="file">첨부파일</a>
+              <a href="" class="btn btn-regular">확인하기</a>
+            </div>
+          </div>
+          <div class="grid-box">
+            <em class="state active">답변완료</em>
+            <h4 class="title">제목이 들어갑니다 제목이 들어갑니다</h4>
+            <div class="grid-con">
+              <p>문의 드릴게 있습니다. 문의 드릴게 있습니다. 문의 드릴게 있습니다. 문의 드릴게 있습니다. </p>
+            </div>
+            <div class="grid-btm">
+              <a href="" class="file">첨부파일</a>
+              <a href="" class="btn btn-regular">확인하기</a>
+            </div>
           </div>
         </div>
-        <div class="box-foot">
-          <button class="btn btn-regular">아이디 찾기</button>
+        <div class="con-btm">
+          <a href="" class="btn btn-major btn-lg">문의하기</a>
         </div>
-      </section>
-
-      <section class="form-box">
-        <div class="box-head">
-          <h2><strong>비밀번호 찾기</strong></h2>
-          <p>아이디(이메일), 이름, 핸드폰 번호를 입력하세요.</p>
-        </div>
-        <div class="box-body">
-          <form action="">
-            <fieldset>
-              <legend class="blind">회원정보</legend>
-              <div class="form-row">
-                <div class="input-wrap">
-                  <label for="u-id" class="blind">해와달 아이디 (이메일주소)</label>
-                  <input id="u-id" type="email" placeholder="해와달 아이디 (이메일주소)" />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="input-wrap">
-                  <label for="u-name" class="blind">이름</label>
-                  <input id="u-name" type="text" placeholder="이름" />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="input-wrap">
-                  <label for="u-phone" class="blind">핸드폰번호 (숫자만입력)</label>
-                  <input id="u-phone" type="text" placeholder="핸드폰번호 (숫자만입력)" />
-                </div>
-              </div>
-            </fieldset>
-          </form>
-          <div class="result">
-            <p>회원님의 이메일로<br /><em>임시비밀번호</em>가 전송되었습니다.</p>
-          </div>
-        </div>
-        <div class="box-foot">
-          <button class="btn btn-regular">비밀번호 찾기</button>
-        </div>
-      </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <ul class="list-info">
+        <li><a href="">고객문의</a></li>
+        <li><a href="javascript:popupLoad('terms');">이용약관</a></li>
+        <li><a href="javascript:popupLoad('terms');">개인정보처리방침</a></li>
+      </ul>
+      <button class="btn-top">TOP</button>
+      <p class="ft-logo"><img src="/images/common/ft-logo.png" alt="해와달 로고" /></p>
+      <address class="address-info">
+        <span>㈜에이튜드</span>
+        <span>대표 임재범</span>
+        <span>사업자등록번호 731-86-00258</span>
+        <span>고객센터 02-586-2589</span>
+        <span>서울시 서초구 사임당로 17길 99, 하이센스빌딩 4층</span>
+      </address>
+      <small class="txt-copyright">COPYRIGHT(C) 2020 SUN AND MOON. ALL RIGHTS RESERVED</small>
+    </footer>
   </div>
 </body>
-
 </html>

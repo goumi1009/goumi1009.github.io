@@ -6,11 +6,24 @@ $(document).ready(function () {
   });
 
   // 팝업 열기 클릭이벤트
-$('.btn-popup').on('click', function (e) {
+  $('.btn-popup').on('click', function (e) {
     e.preventDefault();
     var name = $(this).data('popName'); // data-pop-name속성값 = 파일명
     popupLoad(name);
-});
+  });
+
+  // 아코디언 
+  $('.accordion-box .ac-title').on('click', function() {
+    $(this).toggleClass('active');
+    if($(this).hasClass('active')) {
+      $(this).parents('li').siblings('li').find('.ac-title').removeClass('active');
+      $('.accordion-box .ac-con').stop().slideUp();
+      $(this).next('.ac-con').stop().slideDown();
+
+    } else {
+      $(this).next('.ac-con').slideUp();
+    }
+  });
   
 })
 
@@ -25,7 +38,7 @@ $(window).resize(function () {
 });
 
 // popup 불러오기
-function popupLoad(name) {
+function popupLoad(name, slideIdx) {
   var popup = '<div class="pop-wrap"></div>';
   $('body').append(popup);
   $('html').addClass('dimd');
@@ -38,5 +51,7 @@ function popupLoad(name) {
         $('html').removeClass('dimd');
       }
     });
+
+    $('.prev-slide .slick-wrapper').slick('slickGoTo', slideIdx);
   });
 }
