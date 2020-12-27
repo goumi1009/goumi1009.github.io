@@ -6,5 +6,5 @@ $(document).ready(function () {
       $(".tab-con").eq(idx).addClass("on")
     })
   })
-
+  // 테스트
 })
