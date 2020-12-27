@@ -86,18 +86,54 @@
       </header>
       <div class="contents-wrap">
         <h3>회원정보 수정</h3>
-        <div class="contents">
-          <table>
+        <form action="">
+          <table class="form-table">
+            <caption>아이디, 이름, 핸드폰 번호</caption>
             <tr>
-              <th>아이디</th>
+              <th scope="row">아이디</th>
               <td>
-                
+                <input type="text" />
+              </td>
+            </tr>
+            <tr>
+              <th>이름</th>
+              <td>
+                <input type="text" />
+              </td>
+            </tr>
+            <tr>
+              <th>핸드폰번호</th>
+              <td>
+                <select name="" id="">
+                  <option value="010" selected>010</option>
+                  <option value="010">011</option>
+                  <option value="010">016</option>
+                  <option value="010">017</option>
+                  <option value="010">019</option>
+                </select>
+                <input type="text" />
+                <input type="text" />
               </td>
             </tr>
           </table>
-        </div>
+          <table class="form-table">
+            <tr>
+              <th>비밀번호</th>
+              <td>
+                <input type="password" />
+                <span>(영문+숫자 8~20자)</span>
+              </td>
+            </tr>
+            <tr>
+              <th>비밀번호 확인</th>
+              <td>
+                <input type="password" />
+              </td>
+            </tr>
+          </table>
+        </form>
         <div class="con-btm">
-          <a href="" class="btn btn-major btn-lg">목록</a>
+          <a href="" class="btn btn-major btn-lg">수정완료</a>
           <a href="" class="btn btn-lg">취소</a>
         </div>
       </div>
