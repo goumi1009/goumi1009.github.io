@@ -28,8 +28,10 @@
   <script src="/js/layout.js"></script>
 
   <script src="/js/slick.js"></script>
+  <script src="/js/apply.js"></script>
   <link rel="stylesheet" href="/css/slick.css">
   <link rel="stylesheet" href="/css/sub.css">
+  <link rel="stylesheet" href="/css/apply.css">
 </head>
 
 <body>
@@ -96,16 +98,16 @@
                 </th>
                 <td class="offer-title tab-title">
                   <div class="input-rdo">
-                    <input type="radio" value="Free" />
-                    <label for="">Free</label>
+                    <input type="radio" value="Premium" id="sel_prm" name="sel_item" checked />
+                    <label for="sel_prm">Premium</label>
                   </div>
                   <div class="input-rdo">
-                    <input type="radio" value="Basic" />
-                    <label for="">Basic</label>
+                    <input type="radio" value="Free" id="sel_free" name="sel_item" />
+                    <label for="sel_free">Free</label>
                   </div>
                   <div class="input-rdo">
-                    <input type="radio" value="Premium" />
-                    <label for="">Premium</label>
+                    <input type="radio" value="Basic" id="sel_basic" name="sel_item" />
+                    <label for="sel_basic">Basic</label>
                   </div>
                 </td>
               </tr>
@@ -114,7 +116,7 @@
                   제공내용 및 기능
                 </th>
                 <td class="offer-con tab-con-wrap">
-                  <div class="tab-con">
+                  <div class="tab-con on">
                     <ul class="offer-list">
                       <li>개인사용자 이용</li>
                       <li>사용기간 7일</li>
@@ -198,18 +200,18 @@
                   <label for="pwPass1">결제방법</label>
                 </th>
                 <td>
-                  <div class="input-rdo">
-                    <input type="radio" name="payment" checked />
-                    <label for="">신용카드</label>
+                  <div class="input-rdo normal">
+                    <input type="radio" name="payment" id="pay_cred" checked />
+                    <label for="pay_cred">신용카드</label>
                   </div>
-                  <div class="input-rdo">
-                    <input type="radio" name="payment" />
-                    <label for="">실시간계좌이체</label>
+                  <div class="input-rdo normal">
+                    <input type="radio" name="payment" id="pay_acc" />
+                    <label for="pay_acc">실시간계좌이체</label>
                   </div>
                 </td>
               </tr>
             </table>
-            <p>※결제가 완료되는 시점부터 사용기간이 적용됩니다.</p>
+            <p class="info">※결제가 완료되는 시점부터 사용기간이 적용됩니다.</p>
           </div>
         </form>
         <div class="con-btm">
