@@ -63,6 +63,7 @@
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 16px;
+  cursor: pointer;
 }
 .tab-title .input-rdo input[type="radio"]:checked + label {
   border: none;
