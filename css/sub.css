@@ -53,6 +53,10 @@
   margin-bottom: 60px;
 }
 
+.contents-wrap .contents:last-child {
+  margin-bottom: 0;
+}
+
 .contents-wrap .con-btm {
   display: flex;
   justify-content: center;
@@ -354,6 +358,64 @@
   text-decoration: underline;
 }
 
+/* ------ form-table ------ */
+.form-table {
+  border-top: 2px solid #000;
+}
+.form-table tr {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dadada;
+}
+.form-table th,
+.form-table td {
+  text-align: left;
+  padding: 0 20px;
+}
+.form-table th {
+  width: 187px;
+  border-right: 1px solid #dadada;
+  background: #f3f3f3;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form-table td {
+  display: flex;
+  align-items: center;
+}
+
+.form-table td input,
+.form-table td select {
+  width: calc(33.333% - 10px);
+  max-width: 200px;
+  margin: 10px 0 10px 10px;
+}
+
+.form-table td .col-8 {
+  width: calc(66.666% - 5px);
+  max-width: 410px;
+}
+
+.form-table td input:first-child,
+.form-table td select:first-child {
+  margin-left: 0;
+}
+
+.form-table td input:last-child,
+.form-table td select:last-child {
+  margin-right: 0;
+}
+
+.contents .txt-wraning {
+  margin-bottom: 16px;
+  color: #ff5c0f;
+}
+
+.form-table td span {
+  margin-left: 10px;
+  color: #888;
+}
+
 /* ------ accordion ------ */
 .accordion-box .ac-title {
   display: flex;
@@ -505,10 +567,11 @@
 }
 
 .sample-list li .btn {
+  position: relative;
   width: 60%;
   max-width: 180px;
   height: 2.688em;
-  margin-top: -2.813em;
+  margin: -2.6em auto 0;
   border: 1px solid #ddd;
   background: #fff;
   font-size: 16px;
@@ -766,9 +829,34 @@
     word-wrap: break-word;
   }
 
+  .sub-wrap .contents-wrap {
+    padding: 70px 15px 110px;
+  }
+
   .user-find .form-box {
     margin: 0 10px;
   }
+
+  .form-table {
+    border-top: 0;
+  }
+
+  .form-table tr {
+    display: block;
+    border: 0;
+  }
+
+  .form-table th,
+  .form-table td {
+    padding: 0;
+  }
+
+  .form-table th {
+    display: block;
+    background: transparent;
+    border: 0;
+  }
+
 }
 
 @media screen and (max-width: 640px) {
@@ -795,6 +883,29 @@
   .login-wrap.user-find .form-box {
     min-height: auto;
     margin: 0 0 30px;
+  }
+
+  .form-table td {
+    flex-wrap: wrap;
+  }
+
+  .form-table td input {
+    width: 100%;
+    max-width: 100%;
+  }
+  .form-table td .col-sm-4 {
+    width: calc(33.333% - 7px);
+  } 
+
+  .form-table td .col-8  {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-table td span {
+    display: block;
+    width: 100%;
+    margin-left: 0;
   }
 }
 

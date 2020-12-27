@@ -87,50 +87,65 @@
       <div class="contents-wrap">
         <h3>회원정보 수정</h3>
         <form action="">
-          <table class="form-table">
-            <caption>아이디, 이름, 핸드폰 번호</caption>
-            <tr>
-              <th scope="row">아이디</th>
-              <td>
-                <input type="text" />
-              </td>
-            </tr>
-            <tr>
-              <th>이름</th>
-              <td>
-                <input type="text" />
-              </td>
-            </tr>
-            <tr>
-              <th>핸드폰번호</th>
-              <td>
-                <select name="" id="">
-                  <option value="010" selected>010</option>
-                  <option value="010">011</option>
-                  <option value="010">016</option>
-                  <option value="010">017</option>
-                  <option value="010">019</option>
-                </select>
-                <input type="text" />
-                <input type="text" />
-              </td>
-            </tr>
-          </table>
-          <table class="form-table">
-            <tr>
-              <th>비밀번호</th>
-              <td>
-                <input type="password" />
-                <span>(영문+숫자 8~20자)</span>
-              </td>
-            </tr>
-            <tr>
-              <th>비밀번호 확인</th>
-              <td>
-                <input type="password" />
-              </td>
-            </tr>
-          </table>
+          <div class="contents">
+            <table class="form-table">
+              <caption>아이디, 이름, 핸드폰 번호</caption>
+              <tr>
+                <th scope="row">
+                  <label for="uid">아이디</label>
+                </th>
+                <td>
+                  <input type="text" id="uid" value="abcd123@nate.com" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="uname">이름</label>
+                </th>
+                <td>
+                  <input type="text" id="uname" value="홍길동" readonly />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="UserPhone1">핸드폰번호</label>
+                </th>
+                <td>
+                  <select name="" id="UserPhone1" class="col-sm-4">
+                    <option value="010" selected>010</option>
+                    <option value="010">011</option>
+                    <option value="010">016</option>
+                    <option value="010">017</option>
+                    <option value="010">019</option>
+                  </select>
+                  <input type="text" id="UserPhone2" maxlength="4" value="8888" class="col-sm-4" />
+                  <input type="text" id="UserPhone3" maxlength="4" value="8888" class="col-sm-4" />
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="contents">
+            <p class="txt-wraning">※비밀번호 변경 시 새 비밀번호를 입력해주세요.</p>
+            <table class="form-table">
+              <tr>
+                <th scope="row">
+                  <label for="pwPass">비밀번호</label>
+                </th>
+                <td>
+                  <input type="password" maxlength="20" id="pwPass" class="col-8" />
+                  <span>(영문+숫자 8~20자)</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  <label for="pwPass1">비밀번호 확인</label>
+                </th>
+                <td>
+                  <input type="password" maxlength="20" id="pwPass1" class="col-8" />
+                </td>
+              </tr>
+            </table>
+          </div>
         </form>
         <div class="con-btm">
           <a href="" class="btn btn-major btn-lg">수정완료</a>
