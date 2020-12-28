@@ -53,6 +53,11 @@
   margin-bottom: 60px;
 }
 
+.contents-wrap .contents.top-line {
+  padding-top: 74px;
+  border-top: 2px solid #000;
+}
+
 .contents-wrap .contents:last-child {
   margin-bottom: 0;
 }
@@ -62,6 +67,10 @@
   justify-content: center;
   width: 100%;
   padding: 40px 0 20px;
+}
+
+.contents-wrap .contents + .con-btm {
+  padding-top: 0;
 }
 
 .contents-wrap .con-btm .btn {
@@ -424,6 +433,10 @@
   text-align: right;
   color: #888;
   font-size: 16px;
+}
+
+.contents .txt-info.center {
+  text-align: center;
 }
 
 .form-table td span {
@@ -907,6 +920,66 @@ td.tab-con-wrap {
 .form-table .price strong {
   font-size: 24px;
   color: #ff0000;
+}
+
+.app_comp h4 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.app_comp p {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 26px;
+}
+.app_comp p span {
+  color: #ff5400;
+}
+.app_comp p strong {
+  font-weight: normal;
+  color: #2155c0;
+}
+.app_comp .info-box {
+  display: flex;
+  justify-content: center;
+  max-width: 660px;
+  padding: 28px;
+  border: 1px solid #dedede;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 0 auto 20px;
+}
+.app_comp ul {
+  margin: 0 auto;
+}
+.app_comp li {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.app_comp li:first-child {
+  margin-top: 0;
+}
+.app_comp .title {
+  display: block;
+  width: 80px;
+  min-width: 80px;
+  border: 1px solid #f1ad1a;
+  border-radius: 4px;
+  color: #f1ad1a;
+  text-align: center;
+  margin-right: 15px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+.app_comp a {
+  display: inline-block;
+  color: #555;
 }
 
 

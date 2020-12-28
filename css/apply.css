@@ -1,76 +1,5 @@
 @charset "UTF-8";
 
-
-.info-txt {
-  margin-top: 5px;
-  text-align: right;
-  color: #888;
-  font-size: 16px;
-}
-.contents-wrap .title-underbar {
-  border-bottom: 2px solid #000;
-  margin-bottom: 80px;
-}
-.contents-wrap .title-underbar.no-margin {
-  margin-bottom: 0;
-}
-.contents-wrap .contents.app_comp {
-  margin-bottom: 20px;
-}
-.app_comp h4 {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 25px;
-}
-.app_comp p {
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 30px;
-  line-height: 26px;
-}
-.app_comp p span {
-  color: #ff5400;
-}
-.app_comp p strong {
-  font-weight: normal;
-  color: #2155c0;
-}
-.app_comp ul {
-  max-width: 660px;
-  height: 120px;
-  border: 1px solid #dedede;
-  border-radius: 5px;
-  padding: 28px 145px;
-  box-sizing: border-box;
-  margin: 0 auto 20px;
-}
-.app_comp li {
-  margin-top: 10px;
-  font-weight: bold;
-  font-size: 20px;
-}
-.app_comp li:first-child {
-  margin-top: 0;
-}
-.app_comp .title {
-  display: inline-block;
-  width: 80px;
-  border: 1px solid #f1ad1a;
-  border-radius: 4px;
-  color: #f1ad1a;
-  text-align: center;
-  margin-right: 15px;
-  font-weight: normal;
-  font-size: 14px;
-}
-.app_comp a {
-  display: inline-block;
-  color: #555;
-}
-.app_comp .info.type2 {
-  text-align: center;
-}
 .form-table.cer-info td .btn {
   height: 3em;
   max-height: 48px;
@@ -135,9 +64,6 @@
   }
 }
 @media screen and (max-width: 910px) {
-  .app_comp ul {
-    padding: 28px 100px;
-  }
   .album-card:nth-child(-n + 4) {
     margin: 10px 10px 10px 0;
   }
