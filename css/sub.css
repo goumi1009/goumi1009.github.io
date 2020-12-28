@@ -1207,6 +1207,22 @@ td.tab-con-wrap {
     font-size: 24px;
   }
 
+  .app_comp h4 {
+    word-wrap: break-word;
+    word-break: keep-all;
+    font-size: 24px;
+  }
+
+  .app_comp p {
+    word-wrap: break-word;
+    word-break: keep-all;
+    font-size: 16px;
+  }
+
+  .app_comp li {
+    font-size: 16px;
+  }
+
   .prev-slide .slick-wrapper {
     width: 149px;
     height: 298px;
