@@ -234,7 +234,7 @@
 
 .service .service-list .slide-box img:first-child {
   position: relative;
-  bottom: -60px;
+  left: -60px;
   width: 66.2%;
   opacity: 0;
   transition: 0.8s ease-out;
@@ -243,13 +243,13 @@
 .service .service-list .slide-box img:last-child {
   margin-top: -16%;
   width: 33.7%;
-  margin-left: 60px;
+  margin-left: 20px;
   opacity: 0;
-  transition: 0.6s ease;
+  transition: 0.6s ease .8s;
 }
 
 .service .service-list .slick-current .slide-box img:first-child {
-  bottom: 0;
+  left: 0;
   opacity: 1;
 }
 

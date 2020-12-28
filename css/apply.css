@@ -1,17 +1,5 @@
 @charset "UTF-8";
 
-.form-table th {
-  vertical-align: baseline;
-  padding: 13px 30px;
-}
-.offer-title.tab-title {
-  padding: 13px 30px;
-}
-.tab-title .input-rdo {
-  margin-right: 10px;
-  width: 33%;
-  max-width: 180px;
-}
 .input-rdo input[type="radio"] {
   display: none;
 }

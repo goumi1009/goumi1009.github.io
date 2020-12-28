@@ -34,6 +34,13 @@ $(document).ready(function () {
     $(this).siblings('.file-name').text(filename); 
   });
 
+  $(".tab-title input").each(function (idx, btn) {
+    $(btn).on('click', function () {
+      $(".tab-con").removeClass("on");
+      $(".tab-con").eq(idx).addClass("on")
+    })
+  })
+
 })
 
 // 브라우저 resize 

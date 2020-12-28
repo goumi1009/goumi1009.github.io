@@ -368,14 +368,17 @@
 .form-table th,
 .form-table td {
   text-align: left;
-  padding: 0 20px;
+  padding: 11px 20px;
 }
 .form-table th {
   width: 187px;
   border-right: 1px solid #dadada;
+  padding-top: 22px;
   background: #f3f3f3;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
+  line-height: 1.1;
+  vertical-align: top;
 }
 
 .form-table td {
@@ -387,7 +390,7 @@
 .form-table td select {
   width: calc(33.333% - 10px);
   max-width: 200px;
-  margin: 10px 0 10px 10px;
+  margin-left: 10px;
 }
 
 .form-table td .col-8 {
@@ -418,6 +421,17 @@
 .form-table td span {
   margin-left: 10px;
   color: #888;
+}
+
+/* ------ tab ------ */
+td.tab-title {
+  padding: 13px 30px;
+}
+
+.tab-title .input-rdo {
+  margin-right: 10px;
+  width: calc(33.333% - 6.666px);
+  max-width: 180px;
 }
 
 /* ------ accordion ------ */
@@ -505,7 +519,7 @@
 }
 
 .sample-list li {
-  width: 33.333%;
+  width: calc(33.333% - 13.333px);
   height: 300px;
   margin-right: 20px;
   border-radius: 10px;
@@ -861,6 +875,19 @@
     background: transparent;
     border: 0;
   }
+
+  .sample-list ul {
+    flex-wrap: wrap;
+  }
+
+  .sample-list li {
+    width: calc(50% - 12px);
+    margin-bottom: 20px;
+  }
+
+  .sample-list li:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -948,12 +975,23 @@
     font-size: 14px;
   }
 
+  .sample-list li {
+    width: 100%;
+    margin-right: 0;
+  }
+
   .empty-list p {
     font-size: 16px;
   }
 
   .empty-list p strong {
     font-size: 24px;
+  }
+
+  .prev-slide .slick-wrapper {
+    width: 149px;
+    height: 298px;
+    padding: 26px 7px 33px;
   }
 }
 
