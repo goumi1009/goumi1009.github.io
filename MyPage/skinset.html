@@ -41,10 +41,10 @@
     <script src="/js/layout.js"></script>
 
     <script src="/js/slick.js"></script>
-    <script src="/js/apply.js"></script>
+    <script src="/js/datepicker.js"></script>
     <link rel="stylesheet" href="/css/slick.css" />
+    <link rel="stylesheet" href="/css/datepicker.css" />
     <link rel="stylesheet" href="/css/sub.css" />
-    <link rel="stylesheet" href="/css/apply.css" />
   </head>
 
   <body>
@@ -115,61 +115,67 @@
             <h3>스킨설정</h3>
             <div class="contents skin-set">
               <table class="form-table">
-                <tr class="sel-skin">
+                <caption>부고장, 테마색상 설정</caption>
+                <tr>
                   <th scope="row">
                     <label for="">부고장</label>
-                    <span>부고장을 선택해주세요.</span>
+                    <span class="txt-info">부고장을 선택해주세요.</span>
                   </th>
-                  <td class="card-wrap">
-                    <div class="skin-card">
-                      <input type="radio" name="skin" id="skin1">
-                      <label for="skin1">Basic</label>
+                  <td>
+                    <div class="input-rdo rdo-vtc">
+                      <input type="radio" name="card" id="pic01" value="BC">
+                      <label for="pic01">Basic</label>
                       <div class="img">
-                        <img src="/images/sub/sample-skin-1.png" alt="">
+                        <img src="/images/sub/sample-skin-1.png" alt="" />
+                        <button type="button" class="btn-view" onclick="javascript:popupLoad('prev_obituary', 0)">미리보기</button>
                       </div>
                     </div>
-                    <div class="skin-card">
-                      <input type="radio" name="skin" id="skin2">
-                      <label for="skin2">Basic</label>
+                    <div class="input-rdo rdo-vtc">
+                      <input type="radio" name="card" id="pic02" value="B">
+                      <label for="pic02">Black</label> 
                       <div class="img">
-                        <img src="/images/sub/sample-skin-2.png" alt="">
+                        <img src="/images/sub/sample-skin-2.png" alt="" />
+                        <button type="button" class="btn-view" onclick="javascript:popupLoad('prev_obituary', 1)">미리보기</button>
                       </div>
                     </div>
-                    <div class="skin-card">
-                      <input type="radio" name="skin" id="skin3">
-                      <label for="skin3">Basic</label>
+                    <div class="input-rdo rdo-vtc">
+                      <input type="radio" name="card" id="pic03" value="W">
+                      <label for="pic03">White</label>
                       <div class="img">
-                        <img src="/images/sub/sample-skin-3.png" alt="">
+                        <img src="/images/sub/sample-skin-3.png" alt="" />
+                        <button type="button" class="btn-view" onclick="javascript:popupLoad('prev_obituary', 2)">미리보기</button>
                       </div>
                     </div>
                   </td>
                 </tr>
-                <tr class="sel-skin">
+                <tr>
                   <th scope="row">
-                    <label for="">부고장</label>
-                    <span>테마색상을 선택해주세요.</span>
+                    <label for="">테마색상</label>
+                    <span class="txt-info">테마색상을 선택해주세요.</span>
                   </th>
-                  <td class="card-wrap">
-                    <div class="skin-card">
-                      <input type="radio" name="theme" id="theme1">
-                      <label for="theme1">Basic</label>
+                  <td>
+                    <div class="input-rdo rdo-vtc">
+                      <input type="radio" name="theme" id="theme01" value="B">
+                      <label for="theme01">Black</label>
                       <div class="img">
-                        <img src="/images/sub/sample-theme-1.png" alt="">
+                        <img src="/images/sub/sample-theme-1.png" alt="" />
+                        <button type="button" class="btn-view" onclick="javascript:popupLoad('prev_theme', 0)">미리보기</button>
                       </div>
                     </div>
-                    <div class="skin-card">
-                      <input type="radio" name="theme" id="theme2">
-                      <label for="theme2">Basic</label>
+                    <div class="input-rdo rdo-vtc">
+                      <input type="radio" name="theme" id="theme02" value="W">
+                      <label for="theme02">White</label>
                       <div class="img">
-                        <img src="/images/sub/sample-theme-2.png" alt="">
+                        <img src="/images/sub/sample-theme-2.png" alt="" />
+                        <button type="button" class="btn-view" onclick="javascript:popupLoad('prev_theme', 1)">미리보기</button>
                       </div>
                     </div>
+                  </tr>
                   </td>
-                </tr>
               </table>
             </div>
             <h3>장례정보입력</h3>
-            <table class="form-table cer-info">
+            <table class="form-table">
               <caption>장례정보입력</caption>
               <tbody>
                 <tr>
@@ -177,10 +183,10 @@
                     <label for="txtODName">고인명(연령)</label>
                   </th>
                   <td>
-                    <input type="text" id="txtODName" value="홍길동" class="col-sm-4" />
+                    <input type="text" id="txtODName" class="col-md-8" />
                     <label for="" class="blind">연령</label>
-                    <input type="text" id="txtODAge">
-                    <em>세</em>
+                    <input type="text" id="txtODAge" class="col-md-3" placeholder="연령" />
+                    <span class="sub-unit">세</span>
                   </td>
                 </tr>
                 <tr>
@@ -188,7 +194,7 @@
                     <label for="txtODTName">상주명</label>
                   </th>
                   <td>
-                    <input type="text" id="txtODTName" value="홍길동" class="col-sm-4" />
+                    <input type="text" id="txtODTName" class="col-md-12" />
                   </td>
                 </tr>
                 <tr>
@@ -196,211 +202,270 @@
                     <label for="">빈소</label>
                   </th>
                   <td>
-                    <input type="text" value="연세세브란스 병원 장례식장 1호실" class="col-12" />
+                    <input type="text" class="col-12" />
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">유가족</th>
-                  <td class="f-wrap fam-info">
-                    <div class="fam-info-top">
-                      <label for="txtrl_1" class="blind">고인괴의 관계</label>
-                      <input type="text" id="txtrl_1" class="col-sm-6" placeholder="고인과의 관계" />
-                      <label for="txtfnm_1">성명</label>
-                      <input type="text" id="txtfnm_1" class="col-sm-6" />
+                  <td class="fam-list-wrap row-wrap">
+                    <div class="fam-list">
+                      <div class="form-row">
+                        <input type="text" id="" class="col-md-6" placeholder="고인과의 관계" title="고인과의 관계" />
+                        <input type="text" id="" class="col-md-6" placeholder="성명" title="성명" />
+                      </div>
+                      <div class="form-row flx-md-wrap">
+                        <select name="" class="col-md-4" title="휴대폰 번호 앞 3자리">
+                          <option value="010" selected>010</option>
+                          <option value="010">011</option>
+                          <option value="010">016</option>
+                          <option value="010">017</option>
+                          <option value="010">019</option>
+                        </select>
+                        <input type="text" maxlength="4" class="col-md-4" title="휴대폰번호 중간 4자리" />
+                        <input type="text" maxlength="4" class="col-md-4" title="휴대폰번호 마지막 4자리" />
+                        <button type="button" class="btn btn-regular btn-add">유가족추가</button>
+                      </div>
                     </div>
-                    <div class="fam-info-bottom">
-                      <select name="" class="col-sm-4">
-                        <option value="010" selected>010</option>
-                        <option value="010">011</option>
-                        <option value="010">016</option>
-                        <option value="010">017</option>
-                        <option value="010">019</option>
-                      </select>
-                      <input type="text" maxlength="4" class="col-sm-4" />
-                      <input type="text" maxlength="4" value="홍길동" class="col-sm-4" />
-                      <button type="button" class="btn btn-regular">유가족추가</button>
+                    <div class="fam-list added">
+                      <div class="form-row">
+                        <label for="" class="blind">고인과의 관계</label>
+                        <input type="text" id="" class="col-md-6" placeholder="고인과의 관계" />
+                        <label for="" class="blind">성명</label>
+                        <input type="text" id="" class="col-md-6" placeholder="성명" />
+                      </div>
+                      <div class="form-row flx-md-wrap">
+                        <select name="" class="col-md-4" title="휴대폰 번호 앞 3자리">
+                          <option value="010" selected>010</option>
+                          <option value="010">011</option>
+                          <option value="010">016</option>
+                          <option value="010">017</option>
+                          <option value="010">019</option>
+                        </select>
+                        <input type="text" maxlength="4" class="col-md-4" title="휴대폰번호 중간 4자리" />
+                        <input type="text" maxlength="4" class="col-md-4" title="휴대폰번호 마지막 4자리" />
+                        <button type="button" class="btn btn-del">삭제</button>
+                      </div>
                     </div>
-                    <div class="fam-info-top">
-                      <label for="txtrl_1" class="blind">고인괴의 관계</label>
-                      <input type="text" id="txtrl_1" class="col-sm-6" placeholder="고인과의 관계" />
-                      <label for="txtfnm_1" class="blind">성명</label>
-                      <input type="text" id="txtfnm_1" class="col-sm-6" />
-                    </div>
-                    <div class="fam-info-bottom">
-                      <select name="" class="col-sm-4">
-                        <option value="010" selected>010</option>
-                        <option value="010">011</option>
-                        <option value="010">016</option>
-                        <option value="010">017</option>
-                        <option value="010">019</option>
-                      </select>
-                      <input type="text" maxlength="4" class="col-sm-4" />
-                      <input type="text" maxlength="4" value="홍길동" class="col-sm-4" />
-                      <button type="button" class="btn">삭제</button>
+                    <div class="fam-list added">
+                      <div class="form-row">
+                        <label for="" class="blind">고인과의 관계</label>
+                        <input type="text" id="" class="col-md-6" placeholder="고인과의 관계" />
+                        <label for="" class="blind">성명</label>
+                        <input type="text" id="" class="col-md-6" placeholder="성명" />
+                      </div>
+                      <div class="form-row flx-md-wrap">
+                        <select name="" class="col-md-4" title="휴대폰 번호 앞 3자리">
+                          <option value="010" selected>010</option>
+                          <option value="010">011</option>
+                          <option value="010">016</option>
+                          <option value="010">017</option>
+                          <option value="010">019</option>
+                        </select>
+                        <input type="text" maxlength="4" class="col-md-4" title="휴대폰번호 중간 4자리" />
+                        <input type="text" maxlength="4" class="col-md-4" title="휴대폰번호 마지막 4자리" />
+                        <button type="button" class="btn btn-del">삭제</button>
+                      </div>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <th rowspan="2">장례식장 주소</th>
-                  <td>
-                    <input
-                        type="text"
-                        maxlength="4"
-                        value="주소검색"
-                        class="col-sm-4"
-                      />
+                  <th>장례식장 주소</th>
+                  <td class="flx-wrap">
+                    <div class="form-row">
+                      <input type="text" class="col-md-6" placeholder="주소검색" title="주소검색" />
                       <a href="" class="btn btn-regular">검색</a>
+                    </div>
+                    <div class="form-row flx-md-wrap">
+                      <input type="text" class="col-8 col-md-12" maxlength="4" placeholder="기본주소" title="기본주소" />
+                      <input type="text" class="col-8 col-md-12" maxlength="4" placeholder="상세주소" title="상세주소" />
+                    </div>
                   </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input
-                    type="text"
-                    maxlength="4"
-                    value="주소검색"
-                    class="col-8"
-                  />
-                  <input
-                  type="text"
-                  maxlength="4"
-                  value="주소검색"
-                  class="col-8"
-                />
-              </td>
                 </tr>
                 <tr>
                   <th>입관일시</th>
                   <td>
-                    <input
-                      type="text"
-                      maxlength="4"
-                      value="선택"
-                      class="col-sm-4"
-                    />
-                    <select name="" class="col-sm-4">
-                      <option value="00" selected>00</option>
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
+                    <input type="text" placeholder="선택" class="datepicker start-date col-md-4" title="입관일시(날짜)" />
+                    <select name="" class="col-md-4" title="입관일시(시간)">
+                      <option value="00">00 시</option>
+                      <option value="01">01 시</option>
+                      <option value="02">02 시</option>
+                      <option value="03">03 시</option>
+                      <option value="04">04 시</option>
+                      <option value="05">05 시</option>
+                      <option value="06">06 시</option>
+                      <option value="07">07 시</option>
+                      <option value="08">08 시</option>
+                      <option value="09">09 시</option>
+                      <option value="10">10 시</option>
+                      <option value="11">11 시</option>
+                      <option value="12">12 시</option>
+                      <option value="13">13 시</option>
+                      <option value="14">14 시</option>
+                      <option value="15">15 시</option>
+                      <option value="16">16 시</option>
+                      <option value="17">17 시</option>
+                      <option value="18">18 시</option>
+                      <option value="19">19 시</option>
+                      <option value="20">20 시</option>
+                      <option value="21">21 시</option>
+                      <option value="22">22 시</option>
+                      <option value="23">23 시</option>
                     </select>
-                    <select name="" class="col-sm-4">
-                      <option value="00" selected>00</option>
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
+                    <select name="" class="col-md-4" title="입관일시(분)">
+                      <option value="00">00 분</option>
+                      <option value="10">10 분</option>
+                      <option value="20">20 분</option>
+                      <option value="30">30 분</option>
+                      <option value="40">40 분</option>
+                      <option value="50">50 분</option>
                     </select>
                   </td>
                 </tr>
                 <tr>
                   <th>발인일시</th>
                   <td>
-                    <input
-                      type="text"
-                      maxlength="4"
-                      value="선택"
-                      class="col-sm-4"
-                    />
-                    <select name="" class="col-sm-4">
-                      <option value="00" selected>00</option>
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
+                    <input type="text" placeholder="선택" class="datepicker start-date col-md-4" title="발인일시(날짜)" />
+                    <select name="" class="col-md-4" title="발인일시(시간)">
+                      <option value="00">00 시</option>
+                      <option value="01">01 시</option>
+                      <option value="02">02 시</option>
+                      <option value="03">03 시</option>
+                      <option value="04">04 시</option>
+                      <option value="05">05 시</option>
+                      <option value="06">06 시</option>
+                      <option value="07">07 시</option>
+                      <option value="08">08 시</option>
+                      <option value="09">09 시</option>
+                      <option value="10">10 시</option>
+                      <option value="11">11 시</option>
+                      <option value="12">12 시</option>
+                      <option value="13">13 시</option>
+                      <option value="14">14 시</option>
+                      <option value="15">15 시</option>
+                      <option value="16">16 시</option>
+                      <option value="17">17 시</option>
+                      <option value="18">18 시</option>
+                      <option value="19">19 시</option>
+                      <option value="20">20 시</option>
+                      <option value="21">21 시</option>
+                      <option value="22">22 시</option>
+                      <option value="23">23 시</option>
                     </select>
-                    <select name="" class="col-sm-4">
-                      <option value="00" selected>00</option>
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
+                    <select name="" class="col-md-4" title="발인일시(분)">
+                      <option value="00">00 분</option>
+                      <option value="10">10 분</option>
+                      <option value="20">20 분</option>
+                      <option value="30">30 분</option>
+                      <option value="40">40 분</option>
+                      <option value="50">50 분</option>
                     </select>
                   </td>
                 </tr>
                 <tr>
                   <th>계좌정보</th>
-                  <td class="f-wrap">
-                    <select name="" class="col-sm-4">
-                      <option value="00" selected>00</option>
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
-                    </select>
-                    <input
-                      type="text"
-                      maxlength="4"
-                      value="선택"
-                      class="col-sm-4"
-                    />
-                    <input
-                      type="text"
-                      maxlength="4"
-                      value="선택"
-                      class="col-sm-4"
-                    />
-                    <p class="acc-info">※조의금을 받기위한 계좌정보를 입력해주세요.</p>
+                  <td class="flx-wrap">
+                    <div class="form-row acc-row">
+                      <select name="" title="은행선택" class="col-md-4">
+                        <option value="1">우리은행</option>
+                        <option value="2">국민은행</option>
+                        <option value="3">기업은행</option>
+                        <option value="4">농협은행</option>
+                        <option value="5">신한은행</option>
+                        <option value="6">KEB하나은행</option>
+                        <option value="7">한국씨티은행</option>
+                        <option value="8">SC제일은행</option>
+                        <option value="9">경남은행</option>
+                        <option value="10">광주은행</option>
+                        <option value="11">대구은행</option>
+                        <option value="12">도이체뱅크</option>
+                        <option value="13">부산은행</option>
+                        <option value="14">비엔피파리바은행</option>
+                        <option value="15">산림조합은행</option>
+                        <option value="16">산업은행</option>
+                        <option value="17">새마을금고은행</option>
+                        <option value="18">수출입은행</option>
+                        <option value="19">수협은행</option>
+                        <option value="20">신협은행</option>
+                        <option value="21">우체국은행</option>
+                        <option value="22">저축은행</option>
+                        <option value="23">제주은행</option>
+                        <option value="24">카카오뱅크</option>
+                        <option value="25">케이뱅크</option>
+                        <option value="26">전북은행</option>
+                      </select>
+                      <input type="text" class="col-6 col-md-8" placeholder="계좌번호" title="계좌번호" />
+                      <input type="text" class="col-md-12" placeholder="예금주" title="예금주" />
+                    </div>
+                    <p class="txt-info w-full left">※조의금을 받기위한 계좌정보를 입력해주세요.</p>
                   </td>
                 </tr>
                 <tr>
                   <th>고인사진</th>
                   <td>
-                    <input
-                      type="text"
-                      maxlength="4"
-                      value="선택"
-                      class="col-12"
-                    />
-                    <a href="" class="btn btn-regular">찾아보기</a>
+                    <ul class="attach-img">
+                    <li class="">
+                      <img src="/images/sub/add-image.png">
+                      <input type="file" id="photo" name="">
+                      <label for="people">업로드</label>
+                    </li>
+                    </ul>
                   </td>
                 </tr>
                 <tr>
                   <th>추모앨범사진</th>
-                  <td class="td-album f-wrap">
-                    <div class="album-wrap">
-                      <div class="album-card on">
-                        <img src="/images/sub/sample-upload.png" alt="사진추가">
-                        <a href="" class="cancel-image">사진삭제</a>
-                      </div>
-                      <div class="album-card">
-                        <img src="/images/sub/add-image.png" alt="사진추가">
-                        <a href="" class="cancel-image">사진삭제</a>
-                      </div>
-                      <div class="album-card">
-                        <img src="/images/sub/add-image.png" alt="사진추가">
-                        <a href="" class="cancel-image">사진삭제</a>
-                      </div>
-                      <div class="album-card">
-                        <img src="/images/sub/add-image.png" alt="사진추가">
-                        <a href="" class="cancel-image">사진삭제</a>
-                      </div>
-                      <div class="album-card">
-                        <img src="/images/sub/add-image.png" alt="사진추가">
-                        <a href="" class="cancel-image">사진삭제</a>
-                      </div>
-                      <div class="album-card">
-                        <img src="/images/sub/add-image.png" alt="사진추가">
-                        <a href="" class="cancel-image">사진삭제</a>
-                      </div>
-                      <div class="album-card">
-                        <img src="/images/sub/add-image.png" alt="사진추가">
-                        <a href="" class="cancel-image">사진삭제</a>
-                      </div>
-                      <div class="album-card">
-                        <img src="/images/sub/add-image.png" alt="사진추가">
-                        <a href="" class="cancel-image">사진삭제</a>
-                      </div>
-                      <div class="album-card">
-                        <img src="/images/sub/add-image.png" alt="사진추가">
-                        <a href="" class="cancel-image">사진삭제</a>
-                      </div>
-                      <div class="album-card">
-                        <img src="/images/sub/add-image.png" alt="사진추가">
-                        <a href="" class="cancel-image">사진삭제</a>
-                      </div>
-                    </div>
-                    <p class="upload-info"><strong>4</strong>/<span>10</span>사진은 최대 00MB 이하의 JPG, PNG, GIF 파일 10장 까지 첨부 가능합니다.</p>
+                  <td class="flx-wrap">
+                    <ul class="attach-img">
+                      <li class="">
+                        <img src="/images/sub/sample-upload.png">
+                        <button type="button" class="btn-del">삭제</button>
+                      </li>
+                      <li class="">
+                        <img src="/images/sub/add-image.png">
+                        <input type="file" id="photo" name="">
+                        <label for="people">업로드</label>
+                      </li>
+                      <li class="">
+                        <img src="/images/sub/add-image.png">
+                        <input type="file" id="photo" name="">
+                        <label for="people">업로드</label>
+                      </li>
+                      <li class="">
+                        <img src="/images/sub/add-image.png">
+                        <input type="file" id="photo" name="">
+                        <label for="people">업로드</label>
+                      </li>
+                      <li class="">
+                        <img src="/images/sub/add-image.png">
+                        <input type="file" id="photo" name="">
+                        <label for="people">업로드</label>
+                      </li>
+                      <li class="">
+                        <img src="/images/sub/add-image.png">
+                        <input type="file" id="photo" name="">
+                        <label for="people">업로드</label>
+                      </li>
+                      <li class="">
+                        <img src="/images/sub/add-image.png">
+                        <input type="file" id="photo" name="">
+                        <label for="people">업로드</label>
+                      </li>
+                      <li class="">
+                        <img src="/images/sub/add-image.png">
+                        <input type="file" id="photo" name="">
+                        <label for="people">업로드</label>
+                      </li>
+                      <li class="">
+                        <img src="/images/sub/add-image.png">
+                        <input type="file" id="photo" name="">
+                        <label for="people">업로드</label>
+                      </li>
+                      <li class="">
+                        <img src="/images/sub/add-image.png">
+                        <input type="file" id="photo" name="">
+                        <label for="people">업로드</label>
+                      </li>
+                    </ul>
+                    <p class="txt-info w-full left"><strong>4</strong>/<em>10</em>사진은 최대 00MB 이하의 JPG, PNG, GIF 파일 10장 까지 첨부 가능합니다.</p>
                   </td>
                 </tr>
                 <tr>

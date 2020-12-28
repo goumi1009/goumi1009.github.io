@@ -503,7 +503,7 @@ textarea[disabled] {
   display: flex;
   align-items: center;
   min-width: 150px;
-  height: 48px;
+  min-height: 48px;
   font-size: 18px;
   margin-right: 10px;
 }
@@ -514,6 +514,19 @@ textarea[disabled] {
   line-height: 30px;
   padding-left: 33px;
   cursor: pointer;
+}
+
+.input-rdo label:before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #d3d3d3;
+  top: 50%;
+  left: 0;
+  margin-top: -11px;
 }
 
 .input-rdo input[type="radio"]:checked + label:before {
@@ -533,18 +546,6 @@ textarea[disabled] {
   left: 6px;
 }
 
-.input-rdo label:before {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: 1px solid #d3d3d3;
-  top: 50%;
-  left: 0;
-  margin-top: -11px;
-}
 
 .clear {
   clear: both;

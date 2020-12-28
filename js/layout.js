@@ -1,5 +1,12 @@
 $(document).ready(function () {
-  // 모바일 메뉴 버튼 클릭 이벤트
+
+  // go to top button 
+  $('.sub-wrap .btn-top').click(function (e) {
+    e.preventDefault()
+    $('html, body').animate({scrollTop:0}, 400);
+  });
+  
+  // mobile menu button
   $('.btn-m-toggle').on('click', function () {
     $('.header').toggleClass('active');
   });
@@ -11,7 +18,7 @@ $(document).ready(function () {
     popupLoad(name);
   });
 
-  // 아코디언 
+  // 아코디언
   $('.accordion-box .ac-title').on('click', function() {
     $(this).toggleClass('active');
     if($(this).hasClass('active')) {
@@ -24,23 +31,33 @@ $(document).ready(function () {
     }
   });
 
-  var fileTarget = $('.attach-file #ifile_PC'); 
+  var fileTarget = $('.attach-file #ifile_PC');
   fileTarget.on('change', function () {
-    if(window.FileReader){ // modern browser 
-      var filename = $(this)[0].files[0].name; 
-    } else { // old IE 
+    if(window.FileReader){ // modern browser
+      var filename = $(this)[0].files[0].name;
+    } else { // old IE
       var filename = $(this).val().split('/').pop().split('\\').pop(); // 파일명만 추출 } // 추출한 파일명 삽입 
     }
     $(this).siblings('.file-name').text(filename); 
+    $(this).siblings('.file-del').show();
+    $(this).siblings('p').hide();
   });
 
-  $(".tab-title input").each(function (idx, btn) {
-    $(btn).on('click', function () {
-      $(".tab-con").removeClass("on");
-      $(".tab-con").eq(idx).addClass("on")
-    })
-  })
+  var $startDate = $(".start-date");
+  var $endDate = $(".end-date");
 
+  $startDate.datepicker({
+    autoHide: true,
+  });
+
+  $endDate.datepicker({
+    autoHide: true,
+    startDate: $startDate.datepicker("getDate"),
+  });
+
+  $startDate.on("change", function () {
+    $endDate.datepicker("setStartDate", $startDate.datepicker("getDate"));
+  });
 })
 
 // 브라우저 resize 

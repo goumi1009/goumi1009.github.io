@@ -4,13 +4,13 @@
   </div>
   <div class="slick-wrapper obituary-slick">
     <div data-prev-name="Basic">
-      <img src="/images/sub/sample-obituary-basic.png" alt="">
+      <img src="/images/sub/sample-obituary-basic.png" alt="" />
     </div>
     <div data-prev-name="Black">
-      <img src="/images/sub/sample-obituary-b.png" alt="">
+      <img src="/images/sub/sample-obituary-b.png" alt="" />
     </div>
     <div data-prev-name="White">
-      <img src="/images/sub/sample-obituary-w.png" alt="">
+      <img src="/images/sub/sample-obituary-w.png" alt="" />
     </div>
   </div>
   <button class="btn-close-pop" type="button">닫기</button>

@@ -4,10 +4,10 @@
   </div>
   <div class="slick-wrapper theme-slick">
     <div data-prev-name="Black">
-      <img src="/images/sub/sample-theme-b.png" alt="">
+      <img src="/images/sub/sample-theme-b.png" alt="" />
     </div>
     <div data-prev-name="White">
-      <img src="/images/sub/sample-theme-w.png" alt="">
+      <img src="/images/sub/sample-theme-w.png" alt="" />
     </div>
   </div>
   <button class="btn-close-pop" type="button">닫기</button>

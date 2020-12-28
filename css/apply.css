@@ -1,14 +1,10 @@
 @charset "UTF-8";
-
+/* 
 .form-table.cer-info td .btn {
   height: 3em;
   max-height: 48px;
   margin-left: 10px;
-}
-.form-table.cer-info input,
-.form-table.cer-info select {
-  color: #888;
-}
+} */
 .form-table.cer-info .f-wrap {
   flex-wrap: wrap;
 }

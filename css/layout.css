@@ -406,6 +406,78 @@ body,
   align-items: center;
 }
 
+.input-rdo.rdo-vtc {
+  display: block;
+  text-align: center;
+}
+
+.input-rdo.rdo-vtc label {
+  padding-left: 0;
+  padding-top: 28px;
+}
+
+.input-rdo.rdo-vtc label::before,
+.input-rdo.rdo-vtc input[type="radio"]:checked + label:after {
+  top: 0;
+  left: 50%;
+  margin-top: 0;
+  transform: translateX(-50%);
+}
+
+.input-rdo.rdo-vtc input[type="radio"]:checked + label:after {
+  top: 6px;
+}
+
+.rdo-vtc input[type="radio"] ~ .img {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.rdo-vtc input[type="radio"]:checked ~ .img {
+  border: 3px solid #f1ad18;
+}
+
+.rdo-vtc .img {
+  position: relative;
+  -webkit-box-shadow: 8px 12px 15px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 8px 12px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 8px 12px 15px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e3e3e3;
+}
+
+.rdo-vtc .img img {
+  display: block;
+  width: 100%;
+}
+
+.rdo-vtc .img .btn-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 16px;
+  color: #fff;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.rdo-vtc .img:hover .btn-view {
+  opacity: 1;
+}
+
+.rdo-vtc .img .btn-view::before {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("../images/sub/icon-skin-preview.png");
+  content: "";
+  margin: 0 auto 10px;
+}
+
 /* ------ button ------ */
 .btn {
   display: block;
@@ -537,6 +609,111 @@ a.btn {
 .state.wait {
   border-color: #ff4e3c;
   color: #ff4e3c;
+}
+
+.form-table .datepicker {
+  padding: 4px 45px 4px 0;
+  background-color: #fff;
+  background-image: url("../images/common/ico_cal.png");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.form-table .datepicker:focus {
+  background-image: url("../images/common/ico_cal_ov.png");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* 이미지 추가 리스트 */
+.add_img_list {
+  margin: 10px 0 5px;
+}
+
+.add_img_list.al {
+  margin: 5px 0;
+}
+
+.add_img_list:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.add_img_list > li {
+  position: relative;
+  float: left;
+  min-width: 120px;
+  width: calc(100% / 10 - 5px);
+  margin-left: 10px;
+  line-height: 0;
+}
+
+.add_img_list > li:first-child {
+  margin: 0;
+}
+
+.add_img_list > li:nth-child(10) {
+  margin: 0;
+}
+
+.add_img_list.al > li {
+  width: 120px;
+}
+
+.add_img_list .img {
+  position: relative;
+  height: 100px;
+  border: solid 1px #dcdcdc;
+  box-sizing: border-box;
+}
+
+.add_img_list .img > img {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.add_img_list input[type="file"] {
+  position: absolute;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  border: none;
+  overflow: hidden;
+}
+
+.add_img_list input[type="file"] + label {
+  position: relative;
+  width: calc(100% - 40px);
+  min-width: auto;
+  margin-top: -1px;
+  border-radius: 0;
+}
+
+.add_img_list .btn_del {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 0;
+  line-height: 0;
+}
+
+.add_img_list .btn_del:before {
+  content: "";
+  display: block;
+  height: 40px;
+  /* background: url(/images/admin/temp/ico_del.png) no-repeat center center; */
 }
 
 /* ------ responsive ------ */
