@@ -1,0 +1,331 @@
+@charset "UTF-8";
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.wrap {
+  width: 750px;
+  min-width: 750px;
+  margin: 0 auto;
+  background: #000;
+  min-height: 100%;
+  color: #fff;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 20;
+}
+
+.header .fix-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo {
+  position: relative;
+  overflow: hidden;
+  width: 113px;
+  height: 42px;
+  margin: 0 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../../images/common/hd-logo-w.png");
+  background-position: center;
+  text-indent: -300px;
+  z-index: 10;
+}
+
+.header .btn-m-toggle {
+  position: relative;
+  width: 114px;
+  height: 120px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.header .btn-m-toggle::before,
+.header .btn-m-toggle::after {
+  position: absolute;
+  left: 30px;
+  height: 4px;
+  border-radius: 3px;
+  background: #fff;
+  transition: width 0.3s 0.4s;
+  content: "";
+}
+
+.header .btn-m-toggle::before {
+  bottom: 40px;
+  width: 37px;
+}
+
+.header .btn-m-toggle::after {
+  top: 40px;
+  width: 54px;
+}
+
+.header.active .btn-m-toggle::before,
+.header.active .btn-m-toggle::after {
+  width: 0;
+}
+
+.header .btn-m-toggle .bar {
+  display: block;
+  position: relative;
+  margin-left: 30px;
+  width: 0;
+  height: 4px;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.header .btn-m-toggle .bar::before,
+.header .btn-m-toggle .bar::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 54px;
+  height: 4px;
+  border-radius: 3px;
+  background: #fff;
+  transition: transform 0.3s;
+  content: "";
+}
+
+.header.active .btn-m-toggle .bar::before {
+  background: #fff;
+  transform: rotate(45deg);
+  transition-delay: 0.8s;
+}
+
+.header.active .btn-m-toggle .bar::after {
+  background: #fff;
+  transform: rotate(-45deg);
+  transition-delay: 0.8s;
+}
+
+.header .btn-back {
+  display: block;
+  width: 118px;
+  height: 120px;
+  height: 100%;
+  z-index: 10;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.main .header .btn-back {
+  display: none;
+}
+
+.header .btn-back span {
+  display: block;
+  position: relative;
+  width: 58px;
+  height: 4px;
+  margin-left: 30px;
+  background: #fff;
+  border-radius: 2px;
+  text-indent: -9999px;
+}
+
+.header .btn-back span::before,
+.header .btn-back span::after {
+  position: absolute;
+  left: -2px;
+  display: block;
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  background: #fff;
+  content:"";
+}
+
+.header .btn-back span::before {
+  top: -11px;
+  transform: rotate(-45deg);
+}
+
+.header .btn-back span::after {
+  top: 11px;
+  transform: rotate(45deg);
+}
+
+.header .menu-list {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 187px 30px 0;
+  background: #000 url("../images/black/bg-menu.png");
+  box-sizing: border-box;
+  transform: translateX(100%);
+  transition: .5s;
+}
+
+.header.active .menu-list {
+  transform: translateX(0);
+}
+
+.header .menu-list li {
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.header .menu-list li:first-child {
+  border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+.header .menu-list li a {
+  display: flex;
+  align-items: center;
+  padding: 30px 27px;
+  font-size: 40px;
+}
+
+.header .menu-list li a::before {
+  display: block;
+  width: 47px;
+  height: 47px;
+  margin-right: 20px;
+  content: "";
+}
+
+.header .menu-list li:nth-child(1) a::before {
+  background-image: url("../images/black/icon-menu01-47x47.png");
+}
+.header .menu-list li:nth-child(2) a::before {
+  background-image: url("../images/black/icon-menu02-47x47.png");
+}
+.header .menu-list li:nth-child(3) a::before {
+  background-image: url("../images/black/icon-menu03-47x47.png");
+}
+.header .menu-list li:nth-child(4) a::before {
+  background-image: url("../images/black/icon-menu04-47x47.png");
+}
+.header .menu-list li:nth-child(5) a::before {
+  background-image: url("../images/black/icon-menu05-47x47.png");
+}
+.header .menu-list li:nth-child(6) a::before {
+  background-image: url("../images/black/icon-menu06-47x47.png");
+}
+.header .menu-list li:nth-child(7) a::before {
+  background-image: url("../images/black/icon-menu07-47x47.png");
+}
+
+.contents-wrap {
+ padding: 30px;
+}
+
+.contents-title {
+  overflow: hidden;
+  position: relative;
+  height: 548px;
+  padding-top: 237px;
+  box-sizing: border-box;
+}
+
+.contents-title .inner {
+  position: relative;
+  z-index: 1;
+}
+
+.contents-title::before {
+  position: fixed;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 652px;
+  background: no-repeat center;
+  background-size: 100% 652px;
+  background-image: url("../images/black/bg-title.png");
+  content: "";
+  z-index: 0;
+}
+
+.contents-title .name {
+  margin-bottom: 37px;
+  font-size: 50px;
+  font-family: 'Noto Serif KR';
+  font-weight: 700;
+  color: #ffe0bb;
+}
+
+.contents-title .info dl {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.contents-title .info dt {
+  margin-right: 14px;
+  font-size: 28px;
+  color: #959595;
+}
+
+.contents-title .info dd {
+  font-size: 32px;
+}
+
+.fix-btm .contents {
+  padding-bottom: 100px;
+}
+
+.contents-btm {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: red;
+}
+
+/* ------ main ------ */
+.main .contents-wrap::before {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 652px;
+  background: no-repeat center;
+  background-size: 100% 652px;
+  background-image: url("../images/black/bg-title.png");
+  content: "";
+}
+
+.main-gate {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-gate li {
+  width: calc(50% - 5px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #7d7061;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.main-gate li:nth-child(2n) {
+  margin-right: 0;
+}
+
+.main-gate li a {
+  display: block;
+  width: 100%;
+  height: 250px;
+}

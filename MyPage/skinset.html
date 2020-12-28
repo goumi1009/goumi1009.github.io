@@ -111,358 +111,307 @@
           </div>
         </header>
         <div class="contents-wrap">
-          <h3 class="title-underbar no-margin">스킨설정</h3>
-          <div class="contents skin-set">
-            <div class="sel-skin">
-              <h4>부고장<span>부고장을 선택해주세요.</span></h4>
-              <div class="card-wrap">
-                <div class="skin-card">
-                  <input type="radio" name="skin" id="skin1">
-                  <label for="skin1">Basic</label>
-                  <div class="img">
-                    <img src="/images/sub/sample-skin-1.png" alt="">
-                  </div>
-                </div>
-                <div class="skin-card">
-                  <input type="radio" name="skin" id="skin2">
-                  <label for="skin2">Basic</label>
-                  <div class="img">
-                    <img src="/images/sub/sample-skin-2.png" alt="">
-                  </div>
-                </div>
-                <div class="skin-card">
-                  <input type="radio" name="skin" id="skin3">
-                  <label for="skin3">Basic</label>
-                  <div class="img">
-                    <img src="/images/sub/sample-skin-3.png" alt="">
-                  </div>
-                </div>
-              </div>
+          <form action="">
+            <h3>스킨설정</h3>
+            <div class="contents skin-set">
+              <table class="form-table">
+                <tr class="sel-skin">
+                  <th scope="row">
+                    <label for="">부고장</label>
+                    <span>부고장을 선택해주세요.</span>
+                  </th>
+                  <td class="card-wrap">
+                    <div class="skin-card">
+                      <input type="radio" name="skin" id="skin1">
+                      <label for="skin1">Basic</label>
+                      <div class="img">
+                        <img src="/images/sub/sample-skin-1.png" alt="">
+                      </div>
+                    </div>
+                    <div class="skin-card">
+                      <input type="radio" name="skin" id="skin2">
+                      <label for="skin2">Basic</label>
+                      <div class="img">
+                        <img src="/images/sub/sample-skin-2.png" alt="">
+                      </div>
+                    </div>
+                    <div class="skin-card">
+                      <input type="radio" name="skin" id="skin3">
+                      <label for="skin3">Basic</label>
+                      <div class="img">
+                        <img src="/images/sub/sample-skin-3.png" alt="">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="sel-skin">
+                  <th scope="row">
+                    <label for="">부고장</label>
+                    <span>테마색상을 선택해주세요.</span>
+                  </th>
+                  <td class="card-wrap">
+                    <div class="skin-card">
+                      <input type="radio" name="theme" id="theme1">
+                      <label for="theme1">Basic</label>
+                      <div class="img">
+                        <img src="/images/sub/sample-theme-1.png" alt="">
+                      </div>
+                    </div>
+                    <div class="skin-card">
+                      <input type="radio" name="theme" id="theme2">
+                      <label for="theme2">Basic</label>
+                      <div class="img">
+                        <img src="/images/sub/sample-theme-2.png" alt="">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
             </div>
-            <div class="sel-skin">
-              <h4>테마색상<span>테마색상을 선택해주세요.</span></h4>
-              <div class="card-wrap">
-                <div class="skin-card">
-                  <input type="radio" name="theme" id="theme1">
-                  <label for="theme1">Basic</label>
-                  <div class="img">
-                    <img src="/images/sub/sample-theme-1.png" alt="">
-                  </div>
-                </div>
-                <div class="skin-card">
-                  <input type="radio" name="theme" id="theme2">
-                  <label for="theme2">Basic</label>
-                  <div class="img">
-                    <img src="/images/sub/sample-theme-2.png" alt="">
-                  </div>
-                </div>
-              </div>
-            </div> 
-          </div>
-          <h3>장례정보입력</h3>
-          <table class="form-table cer-info">
-            <colgroup>
-              <col style="width:185px;">
-              <col />
-            </colgroup>
-            <caption>
-              장례정보입력
-            </caption>
-            <tbody>
-              <tr>
-                <th>고인명(연령)</th>
-                <td>
-                  <input
+            <h3>장례정보입력</h3>
+            <table class="form-table cer-info">
+              <caption>장례정보입력</caption>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <label for="txtODName">고인명(연령)</label>
+                  </th>
+                  <td>
+                    <input type="text" id="txtODName" value="홍길동" class="col-sm-4" />
+                    <label for="" class="blind">연령</label>
+                    <input type="text" id="txtODAge">
+                    <em>세</em>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="txtODTName">상주명</label>
+                  </th>
+                  <td>
+                    <input type="text" id="txtODTName" value="홍길동" class="col-sm-4" />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="">빈소</label>
+                  </th>
+                  <td>
+                    <input type="text" value="연세세브란스 병원 장례식장 1호실" class="col-12" />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">유가족</th>
+                  <td class="f-wrap fam-info">
+                    <div class="fam-info-top">
+                      <label for="txtrl_1" class="blind">고인괴의 관계</label>
+                      <input type="text" id="txtrl_1" class="col-sm-6" placeholder="고인과의 관계" />
+                      <label for="txtfnm_1">성명</label>
+                      <input type="text" id="txtfnm_1" class="col-sm-6" />
+                    </div>
+                    <div class="fam-info-bottom">
+                      <select name="" class="col-sm-4">
+                        <option value="010" selected>010</option>
+                        <option value="010">011</option>
+                        <option value="010">016</option>
+                        <option value="010">017</option>
+                        <option value="010">019</option>
+                      </select>
+                      <input type="text" maxlength="4" class="col-sm-4" />
+                      <input type="text" maxlength="4" value="홍길동" class="col-sm-4" />
+                      <button type="button" class="btn btn-regular">유가족추가</button>
+                    </div>
+                    <div class="fam-info-top">
+                      <label for="txtrl_1" class="blind">고인괴의 관계</label>
+                      <input type="text" id="txtrl_1" class="col-sm-6" placeholder="고인과의 관계" />
+                      <label for="txtfnm_1" class="blind">성명</label>
+                      <input type="text" id="txtfnm_1" class="col-sm-6" />
+                    </div>
+                    <div class="fam-info-bottom">
+                      <select name="" class="col-sm-4">
+                        <option value="010" selected>010</option>
+                        <option value="010">011</option>
+                        <option value="010">016</option>
+                        <option value="010">017</option>
+                        <option value="010">019</option>
+                      </select>
+                      <input type="text" maxlength="4" class="col-sm-4" />
+                      <input type="text" maxlength="4" value="홍길동" class="col-sm-4" />
+                      <button type="button" class="btn">삭제</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">장례식장 주소</th>
+                  <td>
+                    <input
+                        type="text"
+                        maxlength="4"
+                        value="주소검색"
+                        class="col-sm-4"
+                      />
+                      <a href="" class="btn btn-regular">검색</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
                     type="text"
-                    id="Name1"
                     maxlength="4"
-                    value="홍길동"
-                    class="col-sm-4"
+                    value="주소검색"
+                    class="col-8"
                   />
-                  <select name="" id="Age" class="col-sm-4">
-                    <option value="01" selected>01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                  </select>
-                  <span>세</span>
-                </td>
-              </tr>
-              <tr>
-                <th>상주명</th>
-                <td>
-                  <input
-                    type="text"
-                    maxlength="4"
-                    value="홍길동"
-                    class="col-sm-4"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <th>빈소</th>
-                <td>
-                  <input
-                    type="text"
-                    maxlength="4"
-                    value="연세세브란스 병원 장례식장 1호실"
-                    class="col-12"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <th rowspan="2">유가족</th>
-                <td class="f-wrap fam-info">
-                  <div class="fam-info-top">
-                    <input
-                      type="text"
-                      maxlength="4"
-                      value="홍길동"
-                      class="col-sm-4"
-                    />
-                    <input
-                      type="text"
-                      maxlength="4"
-                      value="홍길동"
-                      class="col-sm-4"
-                    />
-                  </div>
-                  <div class="fam-info-bottom">
-                    <select name="" class="col-sm-4">
-                      <option value="010" selected>010</option>
-                      <option value="010">011</option>
-                      <option value="010">016</option>
-                      <option value="010">017</option>
-                      <option value="010">019</option>
-                    </select>
-                    <input
-                      type="text"
-                      maxlength="4"
-                      value="홍길동"
-                      class="col-sm-4"
-                    />
-                    <input
-                      type="text"
-                      maxlength="4"
-                      value="홍길동"
-                      class="col-sm-4"
-                    />
-                    <a href="" class="btn btn-regular">유가족추가</a>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="f-wrap fam-info">
-                  <div class="fam-info-top">
-                    <input
-                      type="text"
-                      maxlength="4"
-                      value="홍길동"
-                      class="col-sm-4"
-                    />
-                    <input
-                      type="text"
-                      maxlength="4"
-                      value="홍길동"
-                      class="col-sm-4"
-                    />
-                  </div>
-                  <div class="fam-info-bottom">
-                    <select name="" class="col-sm-4">
-                      <option value="010" selected>010</option>
-                      <option value="010">011</option>
-                      <option value="010">016</option>
-                      <option value="010">017</option>
-                      <option value="010">019</option>
-                    </select>
-                    <input
-                      type="text"
-                      maxlength="4"
-                      value="홍길동"
-                      class="col-sm-4"
-                    />
-                    <input
-                      type="text"
-                      maxlength="4"
-                      value="홍길동"
-                      class="col-sm-4"
-                    />
-                    <a href="" class="btn btn-regular">유가족추가</a>
-                  </div>
-                </td></td>
-              </tr>
-              <tr>
-                <th rowspan="2">장례식장 주소</th>
-                <td>
-                  <input
-                      type="text"
-                      maxlength="4"
-                      value="주소검색"
-                      class="col-sm-4"
-                    />
-                    <a href="" class="btn btn-regular">검색</a>
-                </td>
-              </tr>
-              <tr>
-                <td>
                   <input
                   type="text"
                   maxlength="4"
                   value="주소검색"
                   class="col-8"
                 />
-                <input
-                type="text"
-                maxlength="4"
-                value="주소검색"
-                class="col-8"
-              />
-            </td>
-              </tr>
-              <tr>
-                <th>입관일시</th>
-                <td>
-                  <input
-                    type="text"
-                    maxlength="4"
-                    value="선택"
-                    class="col-sm-4"
-                  />
-                  <select name="" class="col-sm-4">
-                    <option value="00" selected>00</option>
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                  </select>
-                  <select name="" class="col-sm-4">
-                    <option value="00" selected>00</option>
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th>발인일시</th>
-                <td>
-                  <input
-                    type="text"
-                    maxlength="4"
-                    value="선택"
-                    class="col-sm-4"
-                  />
-                  <select name="" class="col-sm-4">
-                    <option value="00" selected>00</option>
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                  </select>
-                  <select name="" class="col-sm-4">
-                    <option value="00" selected>00</option>
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th>계좌정보</th>
-                <td class="f-wrap">
-                  <select name="" class="col-sm-4">
-                    <option value="00" selected>00</option>
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                  </select>
-                  <input
-                    type="text"
-                    maxlength="4"
-                    value="선택"
-                    class="col-sm-4"
-                  />
-                  <input
-                    type="text"
-                    maxlength="4"
-                    value="선택"
-                    class="col-sm-4"
-                  />
-                  <p class="acc-info">※조의금을 받기위한 계좌정보를 입력해주세요.</p>
-                </td>
-              </tr>
-              <tr>
-                <th>고인사진</th>
-                <td>
-                  <input
-                    type="text"
-                    maxlength="4"
-                    value="선택"
-                    class="col-12"
-                  />
-                  <a href="" class="btn btn-regular">찾아보기</a>
-                </td>
-              </tr>
-              <tr>
-                <th>추모앨범사진</th>
-                <td class="td-album f-wrap">
-                  <div class="album-wrap">
-                    <div class="album-card on">
-                      <img src="/images/sub/sample-upload.png" alt="사진추가">
-                      <a href="" class="cancel-image">사진삭제</a>
+              </td>
+                </tr>
+                <tr>
+                  <th>입관일시</th>
+                  <td>
+                    <input
+                      type="text"
+                      maxlength="4"
+                      value="선택"
+                      class="col-sm-4"
+                    />
+                    <select name="" class="col-sm-4">
+                      <option value="00" selected>00</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                    </select>
+                    <select name="" class="col-sm-4">
+                      <option value="00" selected>00</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th>발인일시</th>
+                  <td>
+                    <input
+                      type="text"
+                      maxlength="4"
+                      value="선택"
+                      class="col-sm-4"
+                    />
+                    <select name="" class="col-sm-4">
+                      <option value="00" selected>00</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                    </select>
+                    <select name="" class="col-sm-4">
+                      <option value="00" selected>00</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th>계좌정보</th>
+                  <td class="f-wrap">
+                    <select name="" class="col-sm-4">
+                      <option value="00" selected>00</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                    </select>
+                    <input
+                      type="text"
+                      maxlength="4"
+                      value="선택"
+                      class="col-sm-4"
+                    />
+                    <input
+                      type="text"
+                      maxlength="4"
+                      value="선택"
+                      class="col-sm-4"
+                    />
+                    <p class="acc-info">※조의금을 받기위한 계좌정보를 입력해주세요.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>고인사진</th>
+                  <td>
+                    <input
+                      type="text"
+                      maxlength="4"
+                      value="선택"
+                      class="col-12"
+                    />
+                    <a href="" class="btn btn-regular">찾아보기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>추모앨범사진</th>
+                  <td class="td-album f-wrap">
+                    <div class="album-wrap">
+                      <div class="album-card on">
+                        <img src="/images/sub/sample-upload.png" alt="사진추가">
+                        <a href="" class="cancel-image">사진삭제</a>
+                      </div>
+                      <div class="album-card">
+                        <img src="/images/sub/add-image.png" alt="사진추가">
+                        <a href="" class="cancel-image">사진삭제</a>
+                      </div>
+                      <div class="album-card">
+                        <img src="/images/sub/add-image.png" alt="사진추가">
+                        <a href="" class="cancel-image">사진삭제</a>
+                      </div>
+                      <div class="album-card">
+                        <img src="/images/sub/add-image.png" alt="사진추가">
+                        <a href="" class="cancel-image">사진삭제</a>
+                      </div>
+                      <div class="album-card">
+                        <img src="/images/sub/add-image.png" alt="사진추가">
+                        <a href="" class="cancel-image">사진삭제</a>
+                      </div>
+                      <div class="album-card">
+                        <img src="/images/sub/add-image.png" alt="사진추가">
+                        <a href="" class="cancel-image">사진삭제</a>
+                      </div>
+                      <div class="album-card">
+                        <img src="/images/sub/add-image.png" alt="사진추가">
+                        <a href="" class="cancel-image">사진삭제</a>
+                      </div>
+                      <div class="album-card">
+                        <img src="/images/sub/add-image.png" alt="사진추가">
+                        <a href="" class="cancel-image">사진삭제</a>
+                      </div>
+                      <div class="album-card">
+                        <img src="/images/sub/add-image.png" alt="사진추가">
+                        <a href="" class="cancel-image">사진삭제</a>
+                      </div>
+                      <div class="album-card">
+                        <img src="/images/sub/add-image.png" alt="사진추가">
+                        <a href="" class="cancel-image">사진삭제</a>
+                      </div>
                     </div>
-                    <div class="album-card">
-                      <img src="/images/sub/add-image.png" alt="사진추가">
-                      <a href="" class="cancel-image">사진삭제</a>
-                    </div>
-                    <div class="album-card">
-                      <img src="/images/sub/add-image.png" alt="사진추가">
-                      <a href="" class="cancel-image">사진삭제</a>
-                    </div>
-                    <div class="album-card">
-                      <img src="/images/sub/add-image.png" alt="사진추가">
-                      <a href="" class="cancel-image">사진삭제</a>
-                    </div>
-                    <div class="album-card">
-                      <img src="/images/sub/add-image.png" alt="사진추가">
-                      <a href="" class="cancel-image">사진삭제</a>
-                    </div>
-                    <div class="album-card">
-                      <img src="/images/sub/add-image.png" alt="사진추가">
-                      <a href="" class="cancel-image">사진삭제</a>
-                    </div>
-                    <div class="album-card">
-                      <img src="/images/sub/add-image.png" alt="사진추가">
-                      <a href="" class="cancel-image">사진삭제</a>
-                    </div>
-                    <div class="album-card">
-                      <img src="/images/sub/add-image.png" alt="사진추가">
-                      <a href="" class="cancel-image">사진삭제</a>
-                    </div>
-                    <div class="album-card">
-                      <img src="/images/sub/add-image.png" alt="사진추가">
-                      <a href="" class="cancel-image">사진삭제</a>
-                    </div>
-                    <div class="album-card">
-                      <img src="/images/sub/add-image.png" alt="사진추가">
-                      <a href="" class="cancel-image">사진삭제</a>
-                    </div>
-                  </div>
-                  <p class="upload-info"><strong>4</strong>/<span>10</span>사진은 최대 00MB 이하의 JPG, PNG, GIF 파일 10장 까지 첨부 가능합니다.</p>
-                </td>
-              </tr>
-              <tr>
-                <th>장지</th>
-                <td>
-                  <input type="password" maxlength="20" class="col-12" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                    <p class="upload-info"><strong>4</strong>/<span>10</span>사진은 최대 00MB 이하의 JPG, PNG, GIF 파일 10장 까지 첨부 가능합니다.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>장지</th>
+                  <td>
+                    <input type="password" maxlength="20" class="col-12" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
           <div class="con-btm">
             <a href="" class="btn btn-major btn-lg">등록완료</a>
             <a href="" class="btn btn-lg">취소</a>

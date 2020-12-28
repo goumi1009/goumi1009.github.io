@@ -38,7 +38,7 @@ body,
   margin-left: 40px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(../images/common/hd-logo-c.png);
+  background-image: url("../images/common/hd-logo-c.png");
   background-position: center;
   text-indent: -300px;
 }
@@ -116,7 +116,7 @@ body,
 }
 
 .fp-back .header .hd-logo {
-  background-image: url(../images/common/hd-logo-w.png);
+  background-image: url("../images/common/hd-logo-w.png");
 }
 
 .fp-back .header .hd-gnb {
@@ -168,7 +168,7 @@ body,
   height: 54px;
   padding-top: 16px;
   border: none;
-  background: #8b7c64 url(../images/common/btn-top.png) no-repeat center top
+  background: #8b7c64 url("../images/common/btn-top.png") no-repeat center top
     10px;
   font-size: 12px;
   font-weight: 300;
@@ -592,7 +592,7 @@ a.btn {
   }
 
   .header .btn-m-toggle::before,
-  .btn-m-toggle::after {
+  .header .btn-m-toggle::after {
     position: absolute;
     left: 15px;
     height: 3px;
@@ -634,13 +634,9 @@ a.btn {
     border-radius: 2px;
     background: #000;
   }
-
-  .fp-back .header .btn-m-toggle .bar {
-    background: #fff;
-  }
-
+  
   .header .btn-m-toggle .bar::before,
-  .btn-m-toggle .bar::after {
+  .header .btn-m-toggle .bar::after {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -650,11 +646,6 @@ a.btn {
     background: #000;
     transition: transform 0.3s;
     content: "";
-  }
-
-  .fp-back .header .btn-m-toggle .bar::before,
-  .fp-back .header .btn-m-toggle .bar::after {
-    background: #fff;
   }
 
   .header.active .btn-m-toggle .bar::before {
@@ -667,6 +658,15 @@ a.btn {
     background: #fff;
     transform: rotate(-45deg);
     transition-delay: 0.8s;
+  }
+
+  .fp-back .header .btn-m-toggle .bar {
+    background: #fff;
+  }
+
+  .fp-back .header .btn-m-toggle .bar::before,
+  .fp-back .header .btn-m-toggle .bar::after {
+    background: #fff;
   }
 
   .header .hd-navbar .hd-gnb {
@@ -875,6 +875,9 @@ a.btn {
 }
 
 @media screen and (max-width: 320px) {
+  .footer .btn-top {
+    top: 50px;
+  }
 }
 
 @media screen and (max-height: 638px) {
