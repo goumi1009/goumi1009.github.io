@@ -31,7 +31,6 @@ $(document).ready(function () {
 	$('.service-list .slick-wrapper').slick({
 		fade: true,
 		draggable:false,
-		adaptiveHeight: true,
 		nextArrow: '.service-list .slick-pagination .next',
 		prevArrow: '.service-list .slick-pagination .prev',
 	});
