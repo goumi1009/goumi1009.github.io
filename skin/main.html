@@ -81,6 +81,15 @@
       </div>
     </main>
   </div>
-  
+  <script>
+    $(window).scroll(function() {
+      var st = $(window).scrollTop();
+      if(st >= 100) {
+        $('body').addClass('fix-tit');
+      } else {
+        $('body').removeClass('fix-tit');
+      }
+    });
+  </script>
 </body>
 </html>
