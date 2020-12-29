@@ -869,6 +869,12 @@ td.tab-con-wrap {
   height: 3.715em;
 }
 
+.login-wrap .txt-info {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
 /* ------ 샘플보기페이지 ------ */
 .sample-list ul {
   display: flex;
