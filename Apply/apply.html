@@ -98,16 +98,16 @@
                 </th>
                 <td class="offer-title tab-title">
                   <div class="input-rdo">
-                    <input type="radio" value="Premium" id="sel_prm" name="sel_item" checked />
-                    <label for="sel_prm">Premium</label>
-                  </div>
-                  <div class="input-rdo">
-                    <input type="radio" value="Free" id="sel_free" name="sel_item" />
+                    <input type="radio" value="Free" id="sel_free" name="sel_item" checked data-price="0" />
                     <label for="sel_free">Free</label>
                   </div>
                   <div class="input-rdo">
-                    <input type="radio" value="Basic" id="sel_basic" name="sel_item" />
+                    <input type="radio" value="Basic" id="sel_basic" name="sel_item" data-price="4,900" />
                     <label for="sel_basic">Basic</label>
+                  </div>
+                  <div class="input-rdo">
+                    <input type="radio" value="Premium" id="sel_prm" name="sel_item" data-price="9,900" />
+                    <label for="sel_prm">Premium</label>
                   </div>
                 </td>
               </tr>
@@ -139,14 +139,14 @@
                   </div>
                   <div class="tab-con">
                     <ul class="offer-list">
-                      <li>개인사용자 이용2</li>
-                      <li>사용기간 7일</li>
+                      <li>개인사용자 이용</li>
+                      <li class="dis">사용기간 7일</li>
                       <li>사용기간 15일</li>
-                      <li>사용기간 20일</li>
+                      <li class="dis">사용기간 20일</li>
                       <li>계좌정보 노출</li>
                       <li>스킨 3종 선택</li>
-                      <li>실시간계좌이체 제공</li>
-                      <li>고객센터 지원</li>
+                      <li class="dis">실시간계좌이체 제공</li>
+                      <li>고객센터 지원(일부)</li>
                     </ul>
                     <ul class="offer-list">
                       <li><img src="/images/sub/offer-icon01.png" alt="" /> 부고장 제공</li>
@@ -160,9 +160,9 @@
                   </div>
                   <div class="tab-con">
                     <ul class="offer-list">
-                      <li>개인사용자 이용3</li>
-                      <li>사용기간 7일</li>
-                      <li>사용기간 15일</li>
+                      <li>개인사용자 이용</li>
+                      <li class="dis">사용기간 7일</li>
+                      <li class="dis">사용기간 15일</li>
                       <li>사용기간 20일</li>
                       <li>계좌정보 노출</li>
                       <li>스킨 3종 선택</li>
@@ -192,7 +192,7 @@
                   결제금액
                 </th>
                 <td>
-                  <p class="price"><strong>4,900</strong>원 <span>(VAT포함)</span></p>
+                  <p class="price"><strong class="js-price">0</strong>원 <span>(VAT포함)</span></p>
                 </td>
               </tr>
               <tr>

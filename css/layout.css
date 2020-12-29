@@ -91,7 +91,7 @@ body,
 }
 
 .header .hd-gnb .hd-util .hd-login {
-  background: #8b7c64;
+  background: #c1b47a;
   color: #fff;
 }
 
@@ -123,9 +123,9 @@ body,
   color: #fff;
 }
 
-.fp-back .header .hd-gnb .hd-util .hd-login {
+/* .fp-back .header .hd-gnb .hd-util .hd-login {
   background: #c1b47a;
-}
+} */
 
 /* ------ content ------ */
 .con-wrap {

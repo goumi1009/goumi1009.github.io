@@ -168,16 +168,21 @@
 .grid-box-wrap .grid-box .title {
   width: 100%;
   font-size: 26px;
+  padding-bottom: 30px;
 }
 
-.grid-box-wrap .grid-box div.title::after {
+.grid-box-wrap .grid-box div.title {
+  border-bottom: 1px solid #ddd;
+}
+
+/* .grid-box-wrap .grid-box div.title::after {
   display: block;
   width: 100%;
   padding: 30px 25px 0;
   margin-left: -25px;
   border-bottom: 1px solid #ddd;
   content: "";
-}
+} */
 
 .grid-box-wrap .grid-box .title h3 {
   padding-bottom: 12px;
