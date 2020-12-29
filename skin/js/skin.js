@@ -7,7 +7,7 @@ $(document).ready(function () {
 
 $(window).scroll(function() {
   var st = $(window).scrollTop();
-  if(st >= 100) {
+  if(st >= 100 && !$('body').hasClass('main')) {
     $('body').addClass('fix-tit');
   } else {
     $('body').removeClass('fix-tit');
