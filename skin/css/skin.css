@@ -6,8 +6,10 @@ html, body {
 }
 
 .wrap {
-  width: 750px;
-  min-width: 750px;
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  min-width: 733px;
   margin: 0 auto;
   background: #000;
   min-height: 100%;
