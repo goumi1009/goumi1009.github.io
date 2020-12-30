@@ -12,4 +12,9 @@ $(window).scroll(function() {
   } else {
     $('body').removeClass('fix-tit');
   }
+  if($('body').hasClass('fix-tit')) {
+    $('.info-head .bg').css('top', 0);
+  } else {
+    $('.info-head .bg').css('top', st);
+  }
 });
