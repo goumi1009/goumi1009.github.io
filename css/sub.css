@@ -1179,13 +1179,32 @@ td.tab-con-wrap {
   border-bottom: 1px solid #dadada;
 }
 
-.form-table .fam-list:last-child {
+.form-table div.fam-list:last-of-type {
   border-bottom: 0;
   margin-bottom: 0;
 }
 
 .form-table .fam-list:last-child .form-row:last-child {
   margin-bottom: 0;
+}
+
+.form-table .add-dle-acc .acc-row {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dadada;
+}
+
+.form-table .add-dle-acc div.acc-row:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 10;
+  border: 0;
+}
+
+.form-table .add-dle-acc .col-md-6 {
+  width: calc(50% - 62px);
+}
+
+.form-table .add-dle-acc .col-md-12 {
+  width: calc(33.333% - 62px);
 }
 
 /* ------ responsive ------ */
@@ -1369,10 +1388,10 @@ td.tab-con-wrap {
   }
 
   .form-table .fam-list .btn-add {
-    width: 100%;
-    margin-top: 10px;
     position: absolute;
     bottom: 0;
+    width: 100%;
+    margin-top: 10px;
   }
 
   .form-table .fam-list .btn-del {
@@ -1399,6 +1418,38 @@ td.tab-con-wrap {
   }
 
   .form-table .acc-row .col-md-8 {
+    margin-right: 0;
+  }
+
+  .form-table .add-dle-acc {
+    position: relative;
+    padding-bottom: 58px;
+  }
+
+  .form-table .add-dle-acc .acc-row  {
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    border: 0;
+  }
+
+  .form-table .add-dle-acc .btn-add {
+    position: absolute;
+    margin-top: 10px;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .form-table .add-dle-acc .btn-del {
+    margin-top: 5px;
+  }
+
+  .form-table .add-dle-acc .col-md-12 {
+    width: calc(100% - 115px);
+    margin-right: 5px;
+  }
+
+  .form-table .add-dle-acc .acc-row:first-child .col-md-12 {
+    width: 100%;
     margin-right: 0;
   }
 
