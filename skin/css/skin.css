@@ -17,7 +17,6 @@ body.no-scroll {
   position: relative;
   width: 100%;
   max-width: 750px;
-  min-width: 750px;
   min-height: 100%;
   margin: 0 auto;
   background: #fff;
@@ -276,7 +275,6 @@ body.no-scroll {
 }
 
 .fix-tit .info-head {
-  overflow: hidden;
   position: fixed;
   height: 327px;
   padding-top: 152px;
@@ -295,12 +293,15 @@ body.no-scroll {
 }
 
 .info-head .bg {
-  position: fixed;
+  position: absolute;
   display: block;
   left: 0;
+  right: 0;
   top: 0;
   width: 100%;
+  /* max-width: 750px; */
   height: 548px;
+  margin: 0 auto;
   background: no-repeat center top;
   background-size: cover;
   content: "";
@@ -619,9 +620,6 @@ textarea::placeholder {
 }
 
 .view-box-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -635,6 +633,7 @@ textarea::placeholder {
 
 .view-box-wrap .view-box {
   position: absolute;
+  top: 60px;
   left: 0;
   right: 0;
   width: 100%;
@@ -918,7 +917,7 @@ textarea::placeholder {
   color: #000;
 }
 
-.pw-input-wrap .show-wrap span::before {
+/* .pw-input-wrap .show-wrap span::before {
   display: block;
   position: absolute;
   top: 0;
@@ -928,9 +927,9 @@ textarea::placeholder {
   background: #000;
   opacity: 0;
   content: "";
-}
+} */
 
-.pw-input-wrap .show-wrap span.focus::before {
+.pw-input-wrap .show-wrap span.focus::after {
   animation: fadeOutIn .8s ease-in Infinite;
 }
 
@@ -950,43 +949,58 @@ textarea::placeholder {
 
 @-webkit-keyframes fadeOutIn {
   0% {
-    opacity: 1;
+    background: #aaa;
+  }
+  50% {
+    background: #000;
   }
   100% {
-    opacity: 0;
+    background: #aaa;
   }
 }
 @-moz-keyframes fadeOutIn {
   0% {
-    opacity: 1;
+    background: #aaa;
+  }
+  50% {
+    background: #000;
   }
   100% {
-    opacity: 0;
+    background: #aaa;
   }
 }
 @-ms-keyframes fadeOutIn {
   0% {
-    opacity: 1;
+    background: #aaa;
+  }
+  50% {
+    background: #000;
   }
   100% {
-    opacity: 0;
-  } 
+    background: #aaa;
+  }
 }
 @-o-keyframes fadeOutIn {
   0% {
-    opacity: 1;
+    background: #aaa;
+  }
+  50% {
+    background: #000;
   }
   100% {
-    opacity: 0;
+    background: #aaa;
   }
 }
 @keyframes fadeOutIn {
   0% {
-    opacity: 1;
+    background: #aaa;
+  }
+  50% {
+    background: #000;
   }
   100% {
-    opacity: 0;
-  } 
+    background: #aaa;
+  }
 }
 
 /* manner */
@@ -1069,7 +1083,7 @@ textarea::placeholder {
   border-radius: 10px;
   background: #f6f6f6;
   color: #777;
-  font-size: 32px;
+  font-size: 30px;
   box-sizing: border-box;
 }
 
@@ -1090,7 +1104,7 @@ textarea::placeholder {
 }
 
 .num-list li {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   padding-left: 37px;
   font-size: 28px;
   text-indent: -19px;
@@ -1098,10 +1112,11 @@ textarea::placeholder {
 
 .note-list {
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .note-list li {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-size: 26px;
   text-indent: -34px;
 }
@@ -1129,7 +1144,7 @@ textarea::placeholder {
 }
 
 .num-list h4 {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: 21px;
   font-weight: 400;
   color: #b6a37e;

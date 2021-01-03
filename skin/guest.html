@@ -49,6 +49,7 @@
         </ul>
       </nav>
     </header>
+
     <main class="contents-wrap">
       <header class="info-head">
         <div class="bg"></div>
@@ -92,6 +93,7 @@
       </div>
     </main>
   </div>
+
   <div class="popup-wrap">
     <div class="popup pw-box">
       <p class="tit">
@@ -114,24 +116,19 @@
         </div>
       </form>
     </div>
-  </div>
+  </div><!-- //popup-wrap -->
   <script>
-    // 비밀번호 입력 팝업 열기
+    // 삭제버튼 클릭
     $('.btn-del').on('click', function () {
-      $('.popup-wrap').addClass('active');
-      $('body').addClass('no-scroll');
-      $('.pw-input').focus();
+      openPWpop();
     });
 
-    // 비밀번호 입력 취소
+    // 취소버튼 클릭
     $('.btn-cancel').on('click', function () {
-      $('.popup-wrap').removeClass('active');
-      $('body').removeClass('no-scroll');
-      $('.pw-input').val('');
-      $('.show-wrap span').removeClass('on')
+      closePWpop();
     });
 
-    // 입력영역 클릭시 focus 주기
+    // 입력영역 클릭시 input에 focus
     $('.show-wrap').on('click', function () {
       $(this).siblings('.pw-input').focus();
       console.log('focus')
@@ -147,13 +144,15 @@
         } else {
           $(this).removeClass('on');
         }
-
-        if(pw.length === 0 && $(this).index() === 0) {
-          $(this).addClass('focus');
-        } else {
-          $(this).removeClass('focus');
-        }
       });
+
+      if(pw.length === 0) {
+        $('.show-wrap span').removeClass('focus');
+        $('.show-wrap span').eq(0).addClass('focus');
+      } else {
+        $('.show-wrap span').removeClass('focus');
+        $('.show-wrap span').eq(pw.length).addClass('focus');
+      }
     });
 
     // 포커스시 스타일
@@ -166,6 +165,21 @@
     $('.pw-input').on('blur', function() {
       $('.show-wrap span').removeClass('focus');
     });
+
+    // 비밀번호 입력 팝업 열기
+    function openPWpop() {
+      $('body').addClass('no-scroll');
+      $('.popup-wrap').addClass('active');
+      $('.pw-input').focus();
+    }
+
+    // 비밀번호 입력 팝업 닫기
+    function closePWpop() {
+      $('body').removeClass('no-scroll');
+      $('.popup-wrap').removeClass('active');
+      $('.pw-input').val('');
+      $('.show-wrap span').removeClass('on');
+    }
   </script>
 </body>
 </html>
