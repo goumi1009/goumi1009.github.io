@@ -3,6 +3,7 @@ $(document).ready(function () {
     $('.header').toggleClass('active');
     $('body').toggleClass('no-scroll');
   });
+  ie_fixed();
 });
 
 $(window).scroll(function() {
@@ -12,9 +13,28 @@ $(window).scroll(function() {
   } else {
     $('body').removeClass('fix-tit');
   }
-  if($('body').hasClass('fix-tit')) {
-    $('.info-head .bg').css('top', 0);
-  } else {
-    $('.info-head .bg').css('top', st);
-  }
 });
+
+function setDirection(element) {
+  if (element.naturalWidth / element.naturalHeight / element.parentNode.offsetWidth * element.parentNode.offsetHeight > 1) {
+    element.classList.add('horizontal');
+  } else {
+    element.classList.add('vertical');
+  }
+}
+
+
+/* ie background-fixed 튐 현상 해결을 위한 스크립트 */
+function ie_fixed(){
+    if(navigator.userAgent.match(/Trident\/7\./)) { // if IE
+        $('body').on("mousewheel", function () {
+            // remove default behavior
+            event.preventDefault(); 
+ 
+            //scroll without smoothing
+            var wheelDelta = event.wheelDelta;
+            var currentScrollPosition = window.pageYOffset;
+            window.scrollTo(0, currentScrollPosition - wheelDelta);
+        });
+    }
+}

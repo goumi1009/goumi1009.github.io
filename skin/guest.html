@@ -32,20 +32,20 @@
     <header class="header">
       <div class="fix-box">
         <a href="" class="btn-back"><span></span></a>
-        <h1 class="logo"><a href="">해와달</a></h1>
+        <h1 class="logo"><a href="/skin/main.html">해와달</a></h1>
         <button type="button" class="btn-m-toggle">
           <span class="bar"></span>
         </button>
       </div>
       <nav class="menu-list">
         <ul>
-          <li><a href="">부고장</a></li>
-          <li><a href="">추모앨범</a></li>
-          <li><a href="">장례정보</a></li>
-          <li><a href="">조의금보내기</a></li>
-          <li><a href="">방명록</a></li>
-          <li><a href="">조문예절</a></li>
-          <li><a href="">오시는길</a></li>
+          <li><a href="/skin/card_basic.html">부고장</a></li>
+          <li><a href="/skin/gallery.html">추모앨범</a></li>
+          <li><a href="/skin/info.html">장례정보</a></li>
+          <li><a href="/skin/payment.html">조의금보내기</a></li>
+          <li><a href="/skin/guest.html">방명록</a></li>
+          <li><a href="/skin/manner.html">조문예절</a></li>
+          <li><a href="/skin/map.html">오시는길</a></li>
         </ul>
       </nav>
     </header>
@@ -87,21 +87,85 @@
           </li>
         </ul>
         <div class="con-btm">
-          <a type="button" class="btn btn-lg">방명록 작성</a>
+          <a href="/skin/write.html" class="btn btn-lg">방명록 작성</a>
         </div>
       </div>
     </main>
   </div>
   <div class="popup-wrap">
     <div class="popup pw-box">
-      <p>
+      <p class="tit">
         방명록 작성 시 입력하신<br />
-        비밀번호 4자리를 입력해주세요
+        <em>비밀번호 4자리를 입력해주세요</em>
       </p>
-      <div class="pw-input">
-        <input type="password" />
-      </div>
+      <form action="">
+        <div class="pw-input-wrap">
+          <input type="password" class="pw-input" maxlength="4" />
+          <div class="show-wrap">
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+            <span>*</span>
+          </div>
+        </div>
+        <div class="pop-btm">
+          <button type="reset" class="btn btn-regular btn-cancel">취소</button>
+          <button type="button" class="btn">확인</button>
+        </div>
+      </form>
     </div>
   </div>
+  <script>
+    // 비밀번호 입력 팝업 열기
+    $('.btn-del').on('click', function () {
+      $('.popup-wrap').addClass('active');
+      $('body').addClass('no-scroll');
+      $('.pw-input').focus();
+    });
+
+    // 비밀번호 입력 취소
+    $('.btn-cancel').on('click', function () {
+      $('.popup-wrap').removeClass('active');
+      $('body').removeClass('no-scroll');
+      $('.pw-input').val('');
+      $('.show-wrap span').removeClass('on')
+    });
+
+    // 입력영역 클릭시 focus 주기
+    $('.show-wrap').on('click', function () {
+      $(this).siblings('.pw-input').focus();
+      console.log('focus')
+    });
+
+    // input 입력 체크해서 스타일 변경
+    $('.pw-input').on('keyup', function () {
+      var pw = $(this).val();
+      $('.show-wrap span').each(function () {
+        var idx = $(this).index() + 1;
+        if(pw.length >= idx) {
+          $(this).addClass('on');
+        } else {
+          $(this).removeClass('on');
+        }
+
+        if(pw.length === 0 && $(this).index() === 0) {
+          $(this).addClass('focus');
+        } else {
+          $(this).removeClass('focus');
+        }
+      });
+    });
+
+    // 포커스시 스타일
+    $('.pw-input').on('focus', function() {
+      var cnt = $('.pw-input').val().length;
+      $('.show-wrap span').eq(cnt).addClass('focus');
+    });
+
+    // 블러시 스타일
+    $('.pw-input').on('blur', function() {
+      $('.show-wrap span').removeClass('focus');
+    });
+  </script>
 </body>
 </html>
