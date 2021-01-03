@@ -889,16 +889,15 @@ textarea::placeholder {
 }
 
 .pw-input-wrap {
+  position: relative;
   margin-bottom: 100px;
 }
 
 .pw-input-wrap input{
   border: 0;
   background: transparent;
-  width: 0;
-  font-size: 16px;
+  font-size: 28px;
   position: absolute;
-  top: -100px;
   color: #fff;
 }
 
