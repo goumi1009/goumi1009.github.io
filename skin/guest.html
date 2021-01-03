@@ -137,6 +137,7 @@
     // input 입력 체크해서 스타일 변경
     $('.pw-input').on('keyup', function () {
       var pw = $(this).val();
+
       $('.show-wrap span').each(function () {
         var idx = $(this).index() + 1;
         if(pw.length >= idx) {

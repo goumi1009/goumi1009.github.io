@@ -917,18 +917,6 @@ textarea::placeholder {
   color: #000;
 }
 
-/* .pw-input-wrap .show-wrap span::before {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 4px;
-  height: 80%;
-  background: #000;
-  opacity: 0;
-  content: "";
-} */
-
 .pw-input-wrap .show-wrap span.focus::after {
   animation: fadeOutIn .8s ease-in Infinite;
 }
