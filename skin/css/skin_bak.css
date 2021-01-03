@@ -51,9 +51,9 @@ body.no-scroll {
 .header .logo {
   position: relative;
   overflow: hidden;
-  width: 13.6rem;
-  height: 5.1rem;
-  margin: 0 3rem;
+  width: 136px;
+  height: 51px;
+  margin: 0 30px;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../images/common/logo-w.png");
@@ -69,8 +69,8 @@ body.no-scroll {
 
 .header .btn-m-toggle {
   position: relative;
-  width: 11.4rem;
-  height: 12rem;
+  width: 114px;
+  height: 120px;
   border: 0;
   background: transparent;
   cursor: pointer;
@@ -79,8 +79,8 @@ body.no-scroll {
 .header .btn-m-toggle::before,
 .header .btn-m-toggle::after {
   position: absolute;
-  left: 3rem;
-  height: .4rem;
+  left: 30px;
+  height: 4px;
   border-radius: 3px;
   background: #fff;
   transition: all 0.3s 0.4s;
@@ -88,13 +88,13 @@ body.no-scroll {
 }
 
 .header .btn-m-toggle::before {
-  bottom: 4rem;
-  width: 3.7rem;
+  bottom: 40px;
+  width: 37px;
 }
 
 .header .btn-m-toggle::after {
-  top: 4rem;
-  width: 5.4rem;
+  top: 40px;
+  width: 54px;
 }
 
 .header.active .btn-m-toggle::before,
@@ -106,9 +106,9 @@ body.no-scroll {
 .header .btn-m-toggle .bar {
   display: block;
   position: relative;
-  margin-left: 3rem;
+  margin-left: 30px;
   width: 0;
-  height: .4rem;
+  height: 4px;
   border-radius: 2px;
 }
 
@@ -117,8 +117,8 @@ body.no-scroll {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 5.4rem;
-  height: .4rem;
+  width: 54px;
+  height: 4px;
   border-radius: 3px;
   background: #fff;
   transition: transform 0.3s;
@@ -141,8 +141,8 @@ body.no-scroll {
 
 .header .btn-back {
   display: block;
-  width: 11.8rem;
-  height: 12rem;
+  width: 118px;
+  height: 120px;
   height: 100%;
   z-index: 10;
   box-sizing: border-box;
@@ -153,8 +153,8 @@ body.no-scroll {
 .header .btn-back span {
   display: block;
   position: relative;
-  width: 5.8rem;
-  height: .4rem;
+  width: 58px;
+  height: 4px;
   margin-left: 30px;
   background: #fff;
   border-radius: 2px;
@@ -164,22 +164,22 @@ body.no-scroll {
 .header .btn-back span::before,
 .header .btn-back span::after {
   position: absolute;
-  left: -.2rem;
+  left: -2px;
   display: block;
-  width: 3rem;
-  height: .4rem;
+  width: 30px;
+  height: 4px;
   border-radius: 2px;
   background: #fff;
   content:"";
 }
 
 .header .btn-back span::before {
-  top: -1.1rem;
+  top: -11px;
   transform: rotate(-45deg);
 }
 
 .header .btn-back span::after {
-  top: 1.1rem;
+  top: 11px;
   transform: rotate(45deg);
 }
 
@@ -191,7 +191,7 @@ body.no-scroll {
   width: 100%;
   max-width: 750px;
   height: 100%;
-  padding: 18.7rem 3rem 0;
+  padding: 187px 30px 0;
   background: #000 url("../images/black/bg-menu.png") no-repeat bottom;
   box-sizing: border-box;
   opacity: 0;
@@ -216,15 +216,15 @@ body.no-scroll {
 .header .menu-list li a {
   display: flex;
   align-items: center;
-  padding: 3rem 2.7rem;
-  font-size: 4rem;
+  padding: 30px 27px;
+  font-size: 40px;
 }
 
 .header .menu-list li a::before {
   display: block;
-  width: 4.7rem;
-  height: 4.7rem;
-  margin-right: 2.0rem;
+  width: 47px;
+  height: 47px;
+  margin-right: 20px;
   content: "";
 }
 
@@ -252,13 +252,13 @@ body.no-scroll {
 
 /* content */
 .contents-wrap {
- padding: 3rem;
- padding-top: 54.8rem;
+ padding: 30px;
+ padding-top: 548px;
 }
 
 .fix-tit .contents-wrap {
-  padding-top: 54.8rem;
-  padding-bottom: 12.7rem;
+  padding-top: 548px;
+  padding-bottom: 127px;
 }
 
 .info-head {
@@ -268,20 +268,20 @@ body.no-scroll {
   max-width: 750px;
   top: 0;
   left: 50%;
-  height: 54.8rem;
-  padding: 23.7rem 3rem 0;
-  border-radius: 0 0 6rem 0;
+  height: 548px;
+  padding: 237px 30px 0;
+  border-radius: 0 0 60px 0;
   color: #fff;
   box-sizing: border-box;
   transform: translateX(-50%);
-  box-shadow:  -2rem 7rem rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0px -20px 70px 0px rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
 
 .fix-tit .info-head {
   position: fixed;
-  height: 32.7rem;
-  padding-top: 15.2rem;
+  height: 327px;
+  padding-top: 152px;
   
 }
 
@@ -304,7 +304,7 @@ body.no-scroll {
   top: 0;
   width: 100%;
   /* max-width: 750px; */
-  height: 54.8rem;
+  height: 548px;
   margin: 0 auto;
   background: no-repeat center top;
   background-size: cover;
@@ -314,8 +314,8 @@ body.no-scroll {
 }
 
 .info-head .name {
-  margin-bottom: 3.7rem;
-  font-size: 5rem;
+  margin-bottom: 37px;
+  font-size: 50px;
   font-family: 'Noto Serif KR';
   font-weight: 700;
   color: #ffe0bb;
@@ -324,29 +324,29 @@ body.no-scroll {
 .info-head .info dl {
   display: flex;
   align-items: center;
-  margin-bottom: .8rem;
+  margin-bottom: 8px;
 }
 
 .info-head .info dt {
-  margin-right: 1.4rem;
-  font-size: 2.8rem;
+  margin-right: 14px;
+  font-size: 28px;
   color: #959595;
 }
 
 .info-head .info dd {
-  font-size: 3.2rem;
+  font-size: 32px;
 }
 
 .con-tit {
-  padding-top: 5.2rem;
-  padding-bottom: 1.5rem;
-  font-size: 4.0rem;
+  padding-top: 52px;
+  padding-bottom: 15px;
+  font-size: 40px;
 }
 
 .con-sub-tit {
-  padding-top: 5.6rem;
-  padding-bottom: 1.8rem;
-  font-size: 3.0rem;
+  padding-top: 56px;
+  padding-bottom: 18px;
+  font-size: 30px;
 }
 
 .table-info {
@@ -355,27 +355,27 @@ body.no-scroll {
 
 .table-info th,
 .table-info td {
-  height: 7.3rem;
+  height: 73px;
   border-bottom: 1px solid rgba(221, 221, 221, .4);
 }
 
 .table-info th {
-  width: 17.5rem;
+  width: 175px;
   background: #79848e;
-  font-size: 3rem;
+  font-size: 30px;
   font-weight: 400;
   color: #fff;
 }
 
 .table-info td{
-  padding-left: 3rem;
-  font-size: 3.2rem;
+  padding-left: 30px;
+  font-size: 32px;
   font-weight: 500;
   text-align: left;
 }
 
 .fix-btm .contents {
-  padding-bottom: 14rem;
+  padding-bottom: 140px;
 }
 
 .con-btm {
@@ -394,10 +394,10 @@ body.no-scroll {
   align-items: center;
   justify-content: center;
   width: 50%;
-  height: 12rem;
+  height: 120px;
   border: 0;
   background: #b9a26b;
-  font-size: 3.4rem;
+  font-size: 34px;
   color: #fff;
   text-align: center;
 }
@@ -412,15 +412,15 @@ body.no-scroll {
 
 .btn-call::before {
   display: block;
-  width: 2.8rem;
-  height: 2.8rem;
-  margin-right: 1.4rem;
+  width: 28px;
+  height: 28px;
+  margin-right: 14px;
   background: url("../images/common/icon-btn-call.png");
   content: "";
 }
 
 .btn-lg.btn-call::before {
-  margin-right: 2.6rem;
+  margin-right: 26px;
 }
 
 .popup-wrap {
@@ -433,8 +433,8 @@ body.no-scroll {
   max-width: 750px;
   height: 100%;
   margin: auto;
-  padding: 3rem;
-  padding-top: 30rem;
+  padding: 30px;
+  padding-top: 300px;
   background: rgba(0, 0, 0, .5);
   z-index: 200;
   box-sizing: border-box;
@@ -448,7 +448,7 @@ body.no-scroll {
   width: 100%;
   background: #fff;
   border-radius: 10px;
-  padding: 4rem; 
+  padding: 40px; 
   box-sizing: border-box; 
 }
 
@@ -457,8 +457,8 @@ body.no-scroll {
 }
 
 .popup-wrap .pop-btm .btn {
-  height: 10rem;
-  margin-right: 2.4rem;
+  height: 100px;
+  margin-right: 24px;
   border-radius: 10px;
 }
 
@@ -467,8 +467,8 @@ body.no-scroll {
 }
 
 .popup .tit {
-  margin-bottom: 8rem;
-  font-size: 4rem;
+  margin-bottom: 80px;
+  font-size: 40px;
   font-weight: 500;
   line-height: 1.375;
   text-align: center;
@@ -527,7 +527,7 @@ textarea::placeholder {
   top: 0;
   left: 0;
   width: 100%;
-  height: 65.2rem;
+  height: 652px;
   background: no-repeat center bottom;
   background-size: contain;
   background-image: url("../images/black/bg-main.png");
@@ -546,9 +546,9 @@ textarea::placeholder {
 }
 
 .main-gate li {
-  width: calc(50% - .5rem);
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+  width: calc(50% - 5px);
+  margin-right: 10px;
+  margin-bottom: 10px;
   border: 2px solid #7d7061;
   border-radius: 10px;
   background: rgba(0, 0, 0, .2);
@@ -562,14 +562,14 @@ textarea::placeholder {
 .main-gate li a {
   display: block;
   width: 100%;
-  margin-bottom: 3.5rem;
-  font-size: 3.6rem;
+  margin-bottom: 35px;
+  font-size: 36px;
   text-align: center;
 }
 
 .main-gate li a::before {
   display: block;
-  margin: 4rem 0 2.4rem;
+  margin: 40px 0 24px;
 }
 
 .main-gate li:nth-child(1) a::before {
@@ -643,7 +643,7 @@ textarea::placeholder {
   width: 100%;
   max-width: 750px;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 30px;
   box-sizing: border-box;
 }
 
@@ -655,10 +655,10 @@ textarea::placeholder {
 .view-close {
   overflow: hidden;
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: 40px;
   border: 0;
-  width: 6.4rem;
-  height: 6.4rem;
+  width: 64px;
+  height: 64px;
   float: right;
   background: transparent;
   text-indent: -9999px;
@@ -690,8 +690,8 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 10rem;
-  padding: 0 3rem;
+  height: 100px;
+  padding: 0 30px;
   border-radius: 10px;
   background: rgba(121, 132, 142, .1);
   margin-bottom: 10px;
@@ -699,42 +699,42 @@ textarea::placeholder {
 
 .fam-list li p span {
   display: inline-block;
-  width: 5.5rem;
-  margin-right: 3.0rem;
-  font-size: 3.0rem;
+  width: 55px;
+  margin-right: 30px;
+  font-size: 30px;
   text-align: center;
   color: #aa804f;
 }
 
 .fam-list li p em {
-  font-size: 3.2rem;
+  font-size: 32px;
   font-weight: 500;
 }
 
 .fam-list li .btn-call {
   display: flex;
   align-items: center;
-  height: 5.2rem;
-  padding: 0 2.8rem;
-  border-radius: 2.6rem;
+  height: 52px;
+  padding: 0 28px;
+  border-radius: 26px;
   background: #79848e;
-  font-size: 2.8rem;
+  font-size: 28px;
   color: #fff;
 }
 
 /* map */
 .map-box {
-  height: 65.0rem;
-  margin-bottom: 4.0rem;
+  height: 650px;
+  margin-bottom: 40px;
   background: #eaeaea;
 }
 
 /* payment */
 .payment .sub-txt {
-  padding-left: 12.6rem;
-  margin-bottom: 3.8rem;
+  padding-left: 126px;
+  margin-bottom: 38px;
   background: url("../images/common/icon-flower.png") no-repeat center left;
-  font-size: 2.6rem;
+  font-size: 26px;
   font-weight: 300;
 }
 
@@ -746,46 +746,46 @@ textarea::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10rem;
+  height: 100px;
   border-radius: 10px;
   background: #f1f2f3;
   font-weight: 500;
 }
 
 .deadline dt {
-  margin-right: 1.8rem;
-  padding-left: 4.2rem;
+  margin-right: 18px;
+  padding-left: 42px;
   background: url("../images/common/icon-clock.png") no-repeat center left;
   font-size: 28px;
   color: #e54123;
 }
 
 .deadline dd {
-  font-size: 3rem;
+  font-size: 30px;
 }
 
 .acc-list {
-  padding-top: 1.3rem;
+  padding-top: 13px;
 }
 
 .acc-list li {
-  margin-bottom: 2.6rem;
-  padding: 3.4rem 5.8rem;
+  margin-bottom: 26px;
+  padding: 34px 58px;
   border: 1px solid #e5e5e5;
   border-radius: 10px;
-  box-shadow: .8rem 1.2rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 8px 12px 15px 0px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .acc-list li h3 {
-  margin-bottom: 2rem;
-  font-size: 3.2rem;
+  margin-bottom: 20px;
+  font-size: 32px;
   font-weight: 500;
 }
 
 .acc-list li h3 span {
-  margin-right: 1.7rem;
-  font-size: 3rem;
+  margin-right: 17px;
+  font-size: 30px;
   font-weight: 400;
   color: #aa804f;
 }
@@ -794,8 +794,8 @@ textarea::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4.1rem;
-  font-size: 2.8rem;
+  margin-bottom: 41px;
+  font-size: 28px;
   font-weight: normal;
   font-weight: 350;
   color: #555;
@@ -803,11 +803,11 @@ textarea::placeholder {
 
 .acc-list li .btn-copy {
   width: 100%;
-  height: 8.8rem;
+  height: 88px;
   border-color: #b9a26b;
   border-radius: 10px;
   background: #fff;
-  font-size: 2.8rem;
+  font-size: 28px;
   font-weight: 400;
   color: #b9a26b;
 }
@@ -817,12 +817,12 @@ textarea::placeholder {
   border: 2px solid #cea88f;
   position: relative;
   width: 100%;
-  margin-bottom: 2rem;
-  padding: 3rem;
+  margin-bottom: 20px;
+  padding: 30px 30px;
   border-radius: 10px;
   background-size: 100%;
   box-sizing: border-box;
-  box-shadow: .8rem 1.2rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 8px 12px 15px 0px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -831,36 +831,36 @@ textarea::placeholder {
 }
 
 .board-list li .name {
-  margin-bottom: 1rem;
-  font-size: 3.2rem;
+  margin-bottom: 10px;
+  font-size: 32px;
   font-weight: 500;
 }
 
 .board-list li .name span {
-  margin-right: .9rem;
-  font-size: 3rem;
+  margin-right: 9px;
+  font-size: 30px;
   font-weight: 400;
   color: #aa804f;
 }
 
 .board-list li .tit {
-  margin-bottom: 1.8rem;
-  font-size: 3.6rem;
+  margin-bottom: 18px;
+  font-size: 36px;
   font-weight: 500;
 }
 
 .board-list li .date {
-  font-size: 2.8rem;
+  font-size: 28px;
   color: #999;
 }
 
 .board-list li .btn-del {
   overflow: hidden;
   position: absolute;
-  right: 3rem;
-  top: 3rem;
-  width: 5rem;
-  height: 5rem;
+  right: 30px;
+  top: 30px;
+  width: 50px;
+  height: 50px;
   border: 0;
   border-radius: 100%;
   background: #f4f4f4;
@@ -872,9 +872,9 @@ textarea::placeholder {
   display: block;
   position: absolute;
   top: 45%;
-  left: 1.3rem;
+  left: 13px;
   width: 50%;
-  height: .3rem;
+  height: 3px;
   border-radius: 2px;
   background: #c5c5c5;
   content: "";
@@ -896,25 +896,23 @@ textarea::placeholder {
   border: 0;
   background: transparent;
   width: 0;
-  font-size: 16px;
-  position: absolute;
-  top: -100px;
+  font-size: 1px;
   color: #fff;
 }
 
 .pw-input-wrap .show-wrap {
   display: flex;
   justify-content: center;
-  font-size: 4rem;
+  font-size: 40px;
   cursor: pointer;
 }
 
 .pw-input-wrap .show-wrap span {
   display: block;
   position: relative;
-  width: 7.5rem;
-  height: 5.2rem;
-  margin: 0 1rem;
+  width: 75px;
+  height: 52px;
+  margin: 0 10px;
   color: #fff;
   text-align: center;
 }
@@ -932,7 +930,7 @@ textarea::placeholder {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: .4rem;
+  height: 4px;
   background: #aaa;
   content: "";
 }
@@ -1005,7 +1003,7 @@ textarea::placeholder {
 .tab-tit-wrap {
   display: flex;
   justify-content: space-around;
-  top: 54.8rem;
+  top: 548px;
   width: 100%;
   max-width: 750px;
   left: 0;
@@ -1017,22 +1015,22 @@ textarea::placeholder {
 
 .fix-tit .tab-tit-wrap {
   position: fixed;
-  top: 32.7rem;
+  top: 327px;
   z-index: 5;
 }
 
 .tab-tit-wrap li {
   position: relative;
   width: 25%;
-  height: 7rem;
+  height: 70px;
 }
 
 .tab-tit-wrap li::after {
   position: absolute;
-  right: -.5rem;
+  right: -5px;
   top: 50%;
-  margin-top: -2.1rem;
-  font-size: 3rem;
+  margin-top: -21px;
+  font-size: 30px;
   content: "/";
   color: #ccc;
 }
@@ -1045,11 +1043,11 @@ textarea::placeholder {
   display: block;
   position: relative;
   height: auto;
-  margin: 1.5rem auto;
-  padding: 0 1rem;
+  margin: 15px auto;
+  padding: 0 10px;
   border: 0;
   background: transparent;
-  font-size: 3.2rem;
+  font-size: 32px;
   z-index: 5;
   transition: background .3s;
 }
@@ -1059,7 +1057,7 @@ textarea::placeholder {
 }
 
 .tab-con-wrap {
-  padding: 0 3rem;
+  padding: 0 30px;
 }
 
 .tab-con-wrap .tab-con {
@@ -1071,13 +1069,13 @@ textarea::placeholder {
 }
 
 .txt-box {
-  margin-top: 3rem;
-  padding: 2rem;
+  margin-top: 30px;
+  padding: 20px;
   border: solid 1px #eee;
   border-radius: 10px;
   background: #f6f6f6;
   color: #777;
-  font-size: 3rem;
+  font-size: 30px;
   box-sizing: border-box;
 }
 
@@ -1089,70 +1087,70 @@ textarea::placeholder {
   display: inline-block;
   counter-increment: counter 1;
   content: counter(counter) '.';
-  margin-right: 1.6rem;
+  margin-right: 16px;
 }
 
 .num-list h3 {
-  font-size: 2.8rem;
+  font-size: 28px;
   font-weight: 400;
 }
 
 .num-list li {
-  margin-bottom: 4rem;
-  padding-left: 3.7rem;
-  font-size: 2.8rem;
-  text-indent: -1.9rem;
+  margin-bottom: 40px;
+  padding-left: 37px;
+  font-size: 28px;
+  text-indent: -19px;
 }
 
 .note-list {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .note-list li {
-  margin-bottom: 1.5rem;
-  font-size: 2.6rem;
-  text-indent: -3.4rem;
+  margin-bottom: 15px;
+  font-size: 26px;
+  text-indent: -34px;
 }
 
 .note-list li::before {
   
-  margin-right: 1rem;
+  margin-right: 10px;
   content: "ㅇ";
 }
 
 .note-list.num-list li::before {
   display: inline-block;
   position: relative;
-  top: -.2rem;
+  top: -2px;
   text-indent: 0;
   counter-increment: counter;
   content: counter(counter);
-  font-size: 1.8rem;
+  font-size: 18px;
   border: 1px solid #555;
   border-radius: 100%;
-  width: 2.4rem;
-  height: 2.4rem;
-  line-height: 2.4rem;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
   text-align: center;
 }
 
 .num-list h4 {
-  margin-top: 2rem;
-  margin-left: 2.1rem;
+  margin-top: 20px;
+  margin-left: 21px;
   font-weight: 400;
   color: #b6a37e;
 }
 
 .num-list .sub-txt {
   text-indent: 0;
-  margin-top: 2rem;
-  font-size: 2.6rem;
+  margin-top: 20px;
+  font-size: 26px;
 }
 
 .manner .con-tit + p {
-  font-size: 2.8rem;
-  margin-bottom: 2rem;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
 /* write */
@@ -1161,7 +1159,7 @@ textarea::placeholder {
 }
 
 .input-row {
-  margin-bottom: 5.5rem;
+  margin-bottom: 55px;
 }
 
 div.input-row:last-child {
@@ -1170,8 +1168,8 @@ div.input-row:last-child {
 
 .input-row label {
   display: block;
-  margin-bottom: .7rem;
-  font-size: 2.8rem;
+  margin-bottom: 7px;
+  font-size: 28px;
   font-weight: 700;
   color: #b9a26b;
 }
@@ -1185,9 +1183,9 @@ div.input-row:last-child {
 .input-row select {
   width: 100%;
   height: 3.125em;
-  margin-bottom: .8rem;
+  margin-bottom: 8px;
   border-color: #ccc;
-  font-size: 3.2rem;
+  font-size: 32px;
 }
 
 .input-row input:last-child,
@@ -1215,7 +1213,15 @@ div.input-row:last-child {
 
 .white .header .btn-m-toggle .bar::before,
 .white .header .btn-m-toggle .bar::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 54px;
+  height: 4px;
+  border-radius: 3px;
   background: #000;
+  transition: transform 0.3s;
+  content: "";
 }
 
 .white .header.active .btn-m-toggle .bar::before,
@@ -1349,13 +1355,13 @@ div.input-row:last-child {
 }
 
 .card-wrap .visual {
-  padding-bottom: 3.0rem;
+  padding-bottom: 30px;
 }
 
 
 .card-wrap .visual .img-wrap {
   position: relative;
-  margin: 0 auto 2.7rem;
+  margin: 0 auto 27px;
 }
 
 .card-wrap .img-wrap .cover-img {
@@ -1397,21 +1403,21 @@ div.input-row:last-child {
 
 .card-wrap .visual h2 {
   font-family: 'Noto Serif KR', serif;
-  font-size: 4.0rem;
+  font-size: 40px;
   font-weight: 500;
   text-align: center;
 }
 
 .card-wrap .visual h2 em {
   display: block;
-  margin-bottom: .8rem;
-  font-size: 5.0rem;
+  margin-bottom: 8px;
+  font-size: 50px;
   font-weight: 700;
   color: #b9a26b;
 }
 
 .card-wrap .info-list {
-  padding: 4.4rem 4.0rem 2.6rem;
+  padding: 44px 40px 26px;
   border-radius: 10px;
   background: rgba(255, 255, 255, .8);
 }
@@ -1419,18 +1425,18 @@ div.input-row:last-child {
 .card-wrap .info-list dl {
   display: flex;
   align-items: center;
-  margin-bottom: 1.9rem;
+  margin-bottom: 19px;
 }
 
 .card-wrap .info-list dt {
-  margin-right: 3.2rem;
-  font-size: 2.6rem;
+  margin-right: 32px;
+  font-size: 26px;
   font-weight: 700;
   color: #a1a3a7;
 }
 
 .card-wrap .info-list dd {
-  font-size: 3.2rem;
+  font-size: 32px;
 }
 
 /* card_basic */
@@ -1440,15 +1446,14 @@ div.input-row:last-child {
 
 .card-wrap.basic .logo {
   overflow: hidden;
-  height: 5.1rem;
-  padding: 5.6rem 0 4.1rem;
+  height: 51px;
+  padding: 56px 0 41px;
   background: url("../images/common/logo-c.png") no-repeat center;
-  background-size: 13.6rem auto;
   text-indent: -9999px;
 }
 
 .card-wrap.basic .basic-box {
-  padding: .9rem;
+  padding: 9px;
   border: 10px solid #000;
   border-radius: 10px;
   -webkit-box-shadow: 0 20px 50px 0px rgba(0, 0, 0, 0.3);
@@ -1459,31 +1464,31 @@ div.input-row:last-child {
 }
 
 .card-wrap.basic .card {
-  padding: .8rem;
+  padding: 8px;
   border: 2px solid #000;
   border-radius: 10px;
   box-sizing: border-box;
 }
 
 .card-wrap.basic .visual {
-  padding-bottom: 5rem;
+  padding-bottom: 50px;
   border-bottom: 1px solid #e6e6e6;
 }
 
 .card-wrap.basic .visual img {
-  max-width: 30.9rem;
+  max-width: 309px;
   width: 100%;
   display: block;
   margin: 0 auto;
 }
 
 .card-wrap.basic .visual h2 {
-  margin-top: -1.0rem;
+  margin-top: -10px;
 }
 
 .card-wrap.basic .info-list {
-  padding-left: 2.0rem;
-  padding-right: 2.0rem;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* card_white */
@@ -1513,20 +1518,9 @@ div.input-row:last-child {
   color: #f9f9f9;
 }
 
-@media screen and (max-width: 640px) {
-  html {
-    font-size: 8px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 6px;
-  }
+@media screen and (max-width: 600px) {
+  
 }
 
 @media screen and (max-width: 320px) {
-  html {
-    font-size: 5px;
-  }
 }
