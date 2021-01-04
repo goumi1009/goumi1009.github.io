@@ -514,7 +514,13 @@ textarea::placeholder {
 }
 
 .main .header .fix-box {
-  background: #000;
+  background: no-repeat top center;
+  background-size: cover;
+  background-image: url("../images/black/bg-main.png");
+}
+
+.main .header.active .fix-box {
+  background: none;
 }
 
 .main .header .btn-back {
@@ -526,10 +532,13 @@ textarea::placeholder {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  height: 65.2rem;
-  background: no-repeat center bottom;
-  background-size: contain;
+  max-width: 750px;
+  height: 100%;
+  margin: 0 auto;
+  background: no-repeat top center;
+  background-size: cover;
   background-image: url("../images/black/bg-main.png");
   content: "";
 }
@@ -637,7 +646,7 @@ textarea::placeholder {
 
 .view-box-wrap .view-box {
   position: absolute;
-  top: 60px;
+  top: 0;
   left: 0;
   right: 0;
   width: 100%;
@@ -773,7 +782,7 @@ textarea::placeholder {
   padding: 3.4rem 5.8rem;
   border: 1px solid #e5e5e5;
   border-radius: 10px;
-  box-shadow: .8rem 1.2rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 8px 12px 15px 0 rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -1290,7 +1299,11 @@ div.input-row:last-child {
 }
 
 .white.main .header .fix-box {
-  background: #fff;
+  background-image: url("../images/white/bg-main.png");
+}
+
+.white.main .header.active .fix-box {
+  background: none;
 }
 
 .white.main .contents-wrap::before {
