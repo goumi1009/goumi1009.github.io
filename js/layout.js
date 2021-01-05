@@ -88,3 +88,15 @@ function popupLoad(name, slideIdx) {
     $('.prev-slide .slick-wrapper').slick('slickGoTo', slideIdx);
   });
 }
+
+$(window).on('load', function() {
+
+  // Login bg fadeIn style
+  if($('.wrap').hasClass('login-wrap')) {
+    $('body').addClass('moving');
+    setTimeout(function() { 
+      $('body').addClass('loaded');
+    }, 2000);
+  }
+
+});

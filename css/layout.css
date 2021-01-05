@@ -801,7 +801,7 @@ a.btn {
     left: 15px;
     height: 3px;
     border-radius: 3px;
-    background: #000;
+    background: #8b7c64;
     transition: width 0.3s 0.4s;
     content: "";
   }
@@ -836,7 +836,7 @@ a.btn {
     width: 0;
     height: 3px;
     border-radius: 2px;
-    background: #000;
+    background: #8b7c64;
   }
 
   .header .btn-m-toggle .bar::before,
@@ -847,7 +847,7 @@ a.btn {
     width: 27px;
     height: 3px;
     border-radius: 3px;
-    background: #000;
+    background: #8b7c64;
     transition: transform 0.3s;
     content: "";
   }
@@ -1030,6 +1030,30 @@ a.btn {
     width: 50px;
     height: 50px;
   }
+
+  footer.footer {
+    padding: 0;
+  }
+
+  footer.footer .btn-top {
+    top: -65px;
+  }
+
+  footer.footer .list-info {
+    display: none;
+  }
+
+  footer.footer .ft-logo {
+    display: none;
+  }
+
+  footer.footer .address-info {
+    display: none;
+  }
+
+  footer.footer .txt-copyright {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -1059,6 +1083,17 @@ a.btn {
 
   .btn {
     min-width: 80px;
+    font-size: 16px;
+  }
+  
+  .input-rdo {
+    font-size: 15px;
+    min-width: auto;
+    margin-right: 20px;
+  }
+
+  .input-rdo input[type="radio"]:checked + label:after {
+    display: none;
   }
 
   .pop-wrap .popup {
