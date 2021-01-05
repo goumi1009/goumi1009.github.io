@@ -1516,10 +1516,6 @@ td.offer-con {
     padding-bottom: 36px;
   }
 
-  .skin-set .rdo-vtc {
-    /* display: flex; */
-  }
-
   .skin-set .rdo-vtc label {
     padding-top: 0;
     display: block;
@@ -1541,6 +1537,40 @@ td.offer-con {
 
   .rdo-vtc input[type="radio"] ~ .img {
     margin-top: 2px;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .rdo-vtc input[type="radio"]:checked ~ .img {
+    border: 0;
+  }
+  
+  .rdo-vtc input[type="radio"]:checked ~ .img img {
+    border: 3px solid #f1ad18;
+  }
+
+  .rdo-vtc .img img {
+    border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #dadada;
+  }
+
+  .rdo-vtc .img .btn-view::before { 
+    display: none;
+  }
+
+  .rdo-vtc .img .btn-view {
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #d7d7d7;
+    background: #fff;
+    color: #000;
+    opacity: 1;
+    height: 60px;
+    margin-top: 10px;
   }
 
   .contents-wrap .contents {
@@ -1787,6 +1817,34 @@ td.offer-con {
 
   .txt-info {
     font-size: 12px;
+  }
+
+  .form-table td .txt-info {
+    font-size: 12px;
+  }
+
+  .rdo-vtc .img .btn-view {
+    height: 45px;
+    font-size: 14px;
+    margin-top: 7px;
+  }
+
+  .form-table .add-dle-acc .col-md-12 {
+    width: calc(100% - 85px);
+  }
+
+  .form-table .add-dle-acc .col-md-8 {
+    width: calc(66.666% - 2.5px);
+  }
+
+  .attach-img + p strong,
+  .attach-img + p em {
+    font-size: 14px;
+  }
+
+  .attach-img + .txt-info {
+    padding-left: 47px;
+    text-indent: -47px;
   }
 }
 

@@ -1092,7 +1092,7 @@ a.btn {
     margin-right: 20px;
   }
 
-  .input-rdo input[type="radio"]:checked + label:after {
+  .tab-title .input-rdo input[type="radio"]:checked + label:after {
     display: none;
   }
 
