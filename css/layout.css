@@ -716,6 +716,14 @@ a.btn {
   /* background: url(/images/admin/temp/ico_del.png) no-repeat center center; */
 }
 
+.required {
+    display: inline-block;
+    margin-left: 5px;
+    color: #ff004e;
+    vertical-align: unset;
+    font-size: 13px;
+}
+
 /* ------ responsive ------ */
 @media screen and (max-width: 1440px) {
 }
