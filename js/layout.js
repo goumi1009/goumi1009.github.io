@@ -94,10 +94,11 @@ $(window).on('load', function() {
 
   // Login bg fadeIn style
   if($('.wrap').hasClass('login-wrap')) {
-    $('body').addClass('moving');
+    $('body').addClass('moving no-scroll');
     setTimeout(function() { 
       $('body').addClass('loaded');
-    }, 2000);
+      $('body').removeClass('no-scroll');
+    }, 1100);
   }
 
 });

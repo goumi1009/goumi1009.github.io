@@ -74,7 +74,7 @@ $(document).ready(function () {
   //intro 뒷배경 흩날리는 동그라미
   particlesJS("particles-js", {
     particles: {
-      number: { value: 10, density: { enable: true, value_area: 800 } },
+      number: { value: 6, density: { enable: true, value_area: 800 } },
       color: { value: "#fff" },
       shape: {
         type: "circle",

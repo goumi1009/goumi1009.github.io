@@ -1119,6 +1119,16 @@ a.btn {
   .pop-wrap .popup .text-box {
     margin-right: 0;
   }
+
+  .file {
+    font-size: 15px;
+  }
+
+  .file::before {
+    width: 28px;
+    height: 28px;
+    background-size: 50%;
+  }
 }
 
 @media screen and (max-width: 320px) {
