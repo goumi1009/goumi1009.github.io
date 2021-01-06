@@ -23,7 +23,6 @@ $(document).ready(function () {
           autoplay: true,
           autoplaySpeed: 3500,
         });
-        // $('.service-list .slick-wrapper').slick('slickGoTo', 0);
       } else if(index === 4) {
         $('.guide-list .slick-wrapper').slick('slickGoTo', 0);
       }
@@ -35,21 +34,12 @@ $(document).ready(function () {
     $.fn.fullpage.moveTo();
   });
 
-  // 주요서비스 slide
+  // 주요서비스 slide number
   $('.service-list .slick-wrapper').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
     var slideNum = $('.service-list .slick-pagination .page-num strong');
     currentSlide = nextSlide + 1;
     $(slideNum).text('0'+currentSlide);
   });
-
-  // $('.service-list .slick-wrapper').slick({
-  //   fade: true,
-  //   draggable:false,
-  //   nextArrow: '.service-list .slick-pagination .next',
-  //   prevArrow: '.service-list .slick-pagination .prev',
-  //   autoplay: true,
-  //   autoplaySpeed: 3500,
-  // });
 
   // 조문객 이용가이드 slide
   $('.guide-list .slick-wrapper').on('init', function() {

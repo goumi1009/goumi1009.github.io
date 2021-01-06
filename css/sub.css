@@ -1810,9 +1810,9 @@ td.offer-con {
   }
 
   .prev-slide .slick-wrapper {
-    width: 168px;
-    height: 338px;
-    padding: 29px 7px 37px;
+    width: 198px;
+    height: 398px;
+    padding: 35px 9px 45px;
   }
 
   .prev-slide .slick-wrapper .slick-arrow {
@@ -2063,4 +2063,11 @@ td.offer-con {
 }
 
 @media screen and (max-width: 320px) {
+
+  .prev-slide .slick-wrapper {
+    width: 168px;
+    height: 338px;
+    padding: 29px 7px 37px;
+  }
+
 }
