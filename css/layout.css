@@ -783,7 +783,7 @@ a.btn {
   }
 
   .header .hd-logo {
-    width: 57px;
+    width: 67px;
     margin-left: 15px;
   }
 
@@ -1128,6 +1128,11 @@ a.btn {
     width: 28px;
     height: 28px;
     background-size: 50%;
+  }
+
+  .state {
+    min-width: 65px;
+    font-size: 12px;
   }
 }
 

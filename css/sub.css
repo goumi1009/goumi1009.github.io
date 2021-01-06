@@ -1910,12 +1910,14 @@ td.offer-con {
 
   .grid-box-wrap .grid-box {
     min-height: 160px;
+    padding: 20px;
+    margin-bottom: 15px;
   }
 
   .grid-box-wrap .grid-box .title {
     padding-bottom: 10px;
     font-size: 21px;
-  }
+  } 
 
   .grid-box-wrap .grid-con p {
     font-size: 16px;
@@ -1938,10 +1940,23 @@ td.offer-con {
     font-size: 12px;
   }
 
+  .grid-box-wrap .grid-box .grid-con dt {
+    font-size: 13px;
+  }
+
+  .grid-box-wrap .grid-box .grid-con dd {
+    font-size: 15px;
+  }
+
   .accordion-box .ac-title {
     padding-left: 10px;
-    font-size: 14px;
+    font-size: 15px;
   }
+   
+  .grid-box-wrap .grid-box .grid-btm .btn {
+    font-size: 15px;
+  }
+
 
   .accordion-box .ac-title.active span:first-child {
     font-size: 15px;
@@ -1967,6 +1982,23 @@ td.offer-con {
 
   .accordion-box li .ac-con .file {
     margin-top: 10px;
+  }
+
+  .empty-list {
+    padding-top: 55px;
+  }
+
+  .empty-list img {
+    width: 75px;
+  }
+
+  .empty-list p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .empty-list p strong {
+    font-size: 18px;
   }
 
 }
