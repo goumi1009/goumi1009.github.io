@@ -16,7 +16,6 @@ $(document).ready(function () {
         $('.service-list .slick-wrapper').slick('init');
       } else if(index === 4) {
         $('.guide-list').width($('.guide-list .bg').width() * 5);
-        $('.guide-list .slick-wrapper').slick('init');
       }
     }
   });
@@ -53,16 +52,14 @@ $(document).ready(function () {
     $('.guide-list .slick-current').addClass('slick-current-on');
   });
 
-  
-
   $('.guide-list .slick-wrapper').slick({
-      slidesToShow:5,
-      slidesToScroll:1,
-      arrows: true,
-      dots:false,
-      autoplay: true,
-      autoplaySpeed: 3500,
-    });
+    slidesToShow:5,
+    slidesToScroll:1,
+    arrows: true,
+    dots:false,
+    autoplay: true,
+    autoplaySpeed: 3500,
+  });
 
   
 
@@ -108,19 +105,15 @@ $(document).ready(function () {
     interactivity: {
       detect_on: "canvas",
       events: {
-        onhover: { enable: false, mode: "grab" },
-        onclick: { enable: false, mode: "push" },
+        onhover: { 
+          enable: false, 
+        },
+        onclick: { 
+          enable: false, 
+        },
         resize: true
-      },
-      modes: {
-        grab: { distance: 400, line_linked: { opacity: 1 } },
-        bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
-        repulse: { distance: 200, duration: 0.4 },
-        push: { particles_nb: 4 },
-        remove: { particles_nb: 2 }
       }
     },
-    retina_detect: true
   });
 
 });

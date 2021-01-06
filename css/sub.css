@@ -774,7 +774,7 @@ td.tab-con-wrap {
   background-position: center;
   background-image: url("../images/common/bg-login.jpg");
   transform: scale(1.1);
-  transition: 2s ease-in-out;
+  transition: 1s ease-in-out;
   content: "";
 }
 
@@ -796,7 +796,7 @@ td.tab-con-wrap {
   -webkit-box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.3);
   opacity: 0;
-  transition: 0.8s ease-in-out 1.2s;
+  transition: 0.6s ease-in-out .5s;
 }
 
 .moving .login-wrap .form-box {
