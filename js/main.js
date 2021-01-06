@@ -11,6 +11,13 @@ $(document).ready(function () {
     navigationPosition: 'right',
     afterLoad: function (anchorLink, index) {
       $('.fp-section').eq(index - 1).addClass('loaded');
+      console.log(index)
+      if(index === 2) {
+        $('.service-list .slick-wrapper').slick('init');
+      } else if(index === 4) {
+        $('.guide-list').width($('.guide-list .bg').width() * 5);
+        $('.guide-list .slick-wrapper').slick('init');
+      }
     }
   });
 
