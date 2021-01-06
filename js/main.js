@@ -1,7 +1,6 @@
 // page load 
 $(window).on('load', function(){
   $('.intro').addClass('loaded');
-  $('.guide-list').width($('.guide-list .bg').width() * 5);
 });
 
 $(document).ready(function () {
@@ -38,6 +37,7 @@ $(document).ready(function () {
 
   // 조문객 이용가이드 slide
   $('.guide-list .slick-wrapper').on('init', function() {
+    $('.guide-list').width($('.guide-list .bg').width() * 5);
     $('.guide-list .slick-current').addClass('slick-current-on');
   });
 
@@ -53,8 +53,8 @@ $(document).ready(function () {
       slidesToScroll:1,
       arrows: true,
       dots:false,
-      // autoplay: true,
-      // autoplaySpeed: 3500,
+      autoplay: true,
+      autoplaySpeed: 3500,
     });
 
   
