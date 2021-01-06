@@ -121,6 +121,7 @@
   position: absolute;
   left: 50%;
   bottom: 52px;
+  margin-left: -16px;
   background: transparent;
   border: 0;
   z-index: 100;

@@ -14,10 +14,18 @@ $(document).ready(function () {
       $('.fp-section').eq(index - 1).addClass('loaded');
     },
     onLeave: function (anchorLink, index) {
-      if(index === 2) {
-        $('.service-list .slick-wrapper').slick('init');
+      if(index === 2 && !$('.service').hasClass('loaded')) {
+        $('.service-list .slick-wrapper').slick({
+          fade: true,
+          draggable:false,
+          nextArrow: '.service-list .slick-pagination .next',
+          prevArrow: '.service-list .slick-pagination .prev',
+          autoplay: true,
+          autoplaySpeed: 3500,
+        });
+        // $('.service-list .slick-wrapper').slick('slickGoTo', 0);
       } else if(index === 4) {
-        $('.guide-list .slick-wrapper').slick('init');
+        $('.guide-list .slick-wrapper').slick('slickGoTo', 0);
       }
     }
   });
@@ -34,14 +42,14 @@ $(document).ready(function () {
     $(slideNum).text('0'+currentSlide);
   });
 
-  $('.service-list .slick-wrapper').slick({
-    fade: true,
-    draggable:false,
-    nextArrow: '.service-list .slick-pagination .next',
-    prevArrow: '.service-list .slick-pagination .prev',
-    autoplay: true,
-    autoplaySpeed: 3500,
-  });
+  // $('.service-list .slick-wrapper').slick({
+  //   fade: true,
+  //   draggable:false,
+  //   nextArrow: '.service-list .slick-pagination .next',
+  //   prevArrow: '.service-list .slick-pagination .prev',
+  //   autoplay: true,
+  //   autoplaySpeed: 3500,
+  // });
 
   // 조문객 이용가이드 slide
   $('.guide-list .slick-wrapper').on('init', function() {
