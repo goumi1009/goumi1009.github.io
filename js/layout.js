@@ -45,19 +45,20 @@ $(document).ready(function () {
 
   var $startDate = $(".start-date");
   var $endDate = $(".end-date");
-
-  $startDate.datepicker({
-    autoHide: true,
-  });
-
-  $endDate.datepicker({
-    autoHide: true,
-    startDate: $startDate.datepicker("getDate"),
-  });
-
-  $startDate.on("change", function () {
-    $endDate.datepicker("setStartDate", $startDate.datepicker("getDate"));
-  });
+  if($('body').find('.start-date').length > 0) {
+    $startDate.datepicker({
+      autoHide: true,
+    });
+  
+    $endDate.datepicker({
+      autoHide: true,
+      startDate: $startDate.datepicker("getDate"),
+    });
+  
+    $startDate.on("change", function () {
+      $endDate.datepicker("setStartDate", $startDate.datepicker("getDate"));
+    });
+  }
 })
 
 // 브라우저 resize 

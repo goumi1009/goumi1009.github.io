@@ -102,6 +102,7 @@
 .fp-section {
   background-size: cover;
   background-position: center center;
+  overflow: hidden;
 }
 
 .fp-section .con-wrap {
@@ -115,12 +116,116 @@
   box-sizing: border-box;
 }
 
+.scroll-arrow {
+  overflow: visible;
+  position: absolute;
+  left: 50%;
+  bottom: 52px;
+  background: transparent;
+  border: 0;
+  z-index: 100;
+}
+
+.fp-viewing-4 .scroll-arrow {
+  display: none;
+}
+
+.scroll-arrow .arrow {
+  display: block;
+  width: 33px;
+  height: 18px;
+  background: url("../images/main/arrow-scroll.png") no-repeat center;
+  animation: move 1.3s infinite;
+  margin-top: -5px;
+}
+
+.arrow:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.arrow:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes move {
+  0% {
+      opacity: 0;
+  }
+    50% {
+      opacity: 1;
+  }
+    100% {
+      opacity: 0;
+      transform: translateY(16px);
+  }
+}
+
+.fp-section .bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: no-repeat center;
+  background-size: cover;
+  transform: scale(1.1);
+  transition: transform 2s ease-in-out;
+}
+
+.loaded .bg-wrap {
+  transform: scale(1);
+}
+
 /* ------ intro section ------ */
 .intro {
+  position: relative;
+  z-index: 5;
+}
+
+.intro .bg-wrap {
   background-image: url("../images/main/bg-intro.png");
 }
 
+.intro .bg-wrap::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .7;
+  content: "";
+  transition: 2s ease-in-out;
+}
+
+.loaded.intro .bg-wrap::after {
+  opacity: 0;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(2px);
+  opacity: 0;
+  transition: 1s ease-in-out 1s;
+}
+
+.loaded.intro #particles-js {
+  opacity: 1;
+}
+
 .intro .sec-copy {
+  position: relative;
   padding-left: 54.7%;
   max-width: 616px;
 }
@@ -132,7 +237,17 @@
   margin-left: 3px;
   font-size: 1.875rem;
   color: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform .7s cubic-bezier(0,0,.2,1) 1.6s,opacity .7s cubic-bezier(0,0,.2,1) 1.6s;
 }
+
+.loaded.intro .sec-copy em {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
 .intro .sec-copy em::after {
   display: block;
   position: absolute;
@@ -148,6 +263,14 @@
   font-weight: 300;
   line-height: 1.111;
   color: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform .7s cubic-bezier(0,0,.2,1) 2s,opacity .7s cubic-bezier(0,0,.2,1) 2s;
+}
+
+.loaded.intro .sec-copy h2 {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .intro .sec-copy h2 strong {
@@ -164,38 +287,61 @@
   word-break: keep-all;
   word-wrap: break-word;
   color: #ccc;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform .7s cubic-bezier(0,0,.2,1) 2.4s,opacity .7s cubic-bezier(0,0,.2,1) 2.4s;
+}
+
+.loaded.intro .sec-copy p {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* ------ 주요서비스 section ------ */
 .service {
+  z-index: 4;
+}
+
+.service .bg-wrap {
   background-image: url("../images/main/bg-service.png");
+  background-position: left center;
 }
 
 .service .sec-copy {
   position: relative;
-  left: -60px;
-  opacity: 0;
-  transition: 0.5s ease-out;
 }
 
-.service.loaded .sec-copy {
+.service .sec-copy h2 {
+  position: relative;
+  margin-bottom: 0.529em;
+  margin-left: -2px;
+  font-size: 4.375em;
+  left: -30px;
+  opacity: 0;
+  transition: 0.7s ease-in-out .5s;
+}
+
+.loaded.service .sec-copy h2 {
   left: 0;
   opacity: 1;
 }
 
-.service .sec-copy h2 {
-  margin-bottom: 0.529em;
-  margin-left: -2px;
-  font-size: 4.375em;
-}
-
 .service .sec-copy p {
+  position: relative;
   font-size: 1.25rem;
   font-weight: normal;
   font-weight: 350;
   word-wrap: break-word;
   word-break: keep-all;
   color: #555;
+  left: -30px;
+  opacity: 0;
+  transition: 0.7s ease-in-out .8s;
+}
+
+.loaded.service .sec-copy p {
+  left: 0;
+  opacity: 1;
 }
 
 .service .sec-copy p em {
@@ -214,17 +360,28 @@
   right: -40px;
   width: 60.4%;
   opacity: 0;
-  transition: 0.6s ease-out;
+  transition: 0.6s ease-out 1.1s;
 }
 
-.service.loaded .service-list {
+.loaded.service .service-list {
   right: 0;
   opacity: 1;
 }
 
+.service .service-list .slick-wrapper {
+  z-index: 10;
+}
+
 .service .service-list .slide-cut {
   position: relative;
+  opacity: 0;
+  transition: .7s ease-in-out 1.3s;
 }
+
+.loaded.service .service-list .slide-cut {
+  opacity: 1;
+}
+
 
 .service .service-list .slide-cut .slide-box {
   display: flex;
@@ -264,12 +421,86 @@
   position: absolute;
   right: 0;
   bottom: 38%;
+  z-index: 10;
 }
 
 .service .service-list .page-num {
   font-family: "GmarketSans";
   font-size: 1.125rem;
   vertical-align: middle;
+}
+
+.service .service-list::before,
+.service .service-list::after {
+  display: block;
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+}
+
+.service .service-list::before {
+  left: 10%;  
+  bottom: 10%;
+  width: 59.2%;
+  height: 71.1%;
+  background: #35a3dc;
+  opacity: .1;
+  animation: circle-motion 3s 0s ease-in-out infinite;
+}
+.service .service-list::after {
+  top: 12%;
+  left: 42%;
+  width: 40%;
+  height: 48.2%;
+  background: #235728;
+  opacity: .05;
+  animation: circle-motion-2 3s 0s ease-in-out infinite;
+}
+
+@keyframes circle-motion {
+  0% {
+    -webkit-transform: translateX(0) scale(1);
+    -o-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    -webkit-transform: translateX(0) scale(1.05);
+    -o-transform: translateX(0) scale(1.05);
+    transform: translateX(0) scale(1.05);
+  }
+  to {
+    -webkit-transform: translateX(0) scale(1);
+    -o-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes circle-motion-2 {
+  0% {
+    -webkit-transform: translateX(0) scaleX(1.05);
+    -o-transform: translateX(0) scaleX(1.05);
+    transform: translateX(0) scaleX(1.05);
+  }
+  25% {
+    -webkit-transform: translateX(0) scale(1);
+    -o-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    -webkit-transform: translateX(0) scaleX(1.05);
+    -o-transform: translateX(0) scaleX(1.05);
+    transform: translateX(0) scaleX(1.05);
+  }
+  75% {
+    -webkit-transform: translateX(0) scale(1);
+    -o-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  to {
+    -webkit-transform: translateX(0) scaleX(1.05);
+    -o-transform: translateX(0) scaleX(1.05);
+    transform: translateX(0) scaleX(1.05);
+  }
 }
 
 .service .service-list .page-num strong {
@@ -290,8 +521,7 @@
   width: 42px;
   height: 42px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background: transparent url("../images/main/service-slide-arrow.png")
-    no-repeat center;
+  background: transparent url("../images/main/service-slide-arrow.png") no-repeat center;
   overflow: hidden;
   text-indent: -100px;
   transition: 0.3s ease;
@@ -308,14 +538,19 @@
 
 /* ------ 이용 단계 가이드 section ------ */
 .use-step {
+  z-index: 3;
+}
+
+.use-step .bg-wrap {
   background-image: url("../images/main/bg-use-step.png");
+  background-position: bottom center;
 }
 
 .use-step .sec-copy {
   position: relative;
   top: -30px;
   opacity: 0;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in .5s;
 }
 
 .use-step.loaded .sec-copy {
@@ -361,22 +596,22 @@
 
 .use-step .step li:first-child {
   left: -30px;
-  transition-delay: 0.2s;
+  transition-delay: .7s;
 }
 
 .use-step .step li:nth-child(2) {
   left: -60px;
-  transition-delay: 0.4s;
+  transition-delay: .9s;
 }
 
 .use-step .step li:nth-child(3) {
   left: -90px;
-  transition-delay: 0.6s;
+  transition-delay: 1.1s;
 }
 
 .use-step .step li:nth-child(4) {
   left: -120px;
-  transition-delay: 0.8s;
+  transition-delay: 1.3s;
 }
 
 .use-step.loaded .step ol li {
@@ -424,7 +659,7 @@
   -moz-box-shadow: 8px 20px 50px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 8px 20px 50px 0px rgba(0, 0, 0, 0.2);
   opacity: 0;
-  transition: 0.3s ease-out 1.4s;
+  transition: 0.3s ease-out 1.9s;
 }
 
 .use-step.loaded .step ol + p {
@@ -435,13 +670,21 @@
 /* ------ 조문객 이용가이드 section ------ */
 .screen-guide {
   position: relative;
+  z-index: 2;
+}
+
+.screen-guide .bg-wrap {
   background-image: url("../images/main/bg-screen-guide.png");
+}
+
+.screen-guide .con-wrap {
+  position: relative;
 }
 
 .screen-guide .sec-copy {
   margin-left: 30px;
   opacity: 0;
-  transition: 0.6s ease 0.3s;
+  transition: 0.6s ease .5s;
 }
 
 .screen-guide.loaded .sec-copy {
@@ -466,39 +709,47 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 1350px;
+  /* width: 1350px; */
+  height: 50.3%;
   margin-left: -136px;
   opacity: 0;
-  transform: translateY(-39%) scale(1.1);
-  transition: 0.8s ease-out;
+  transform: translateY(-43%) scale(1.1);
+  transition: 0.8s ease-out .8s;
 }
 
 .screen-guide.loaded .guide-list {
   opacity: 1;
-  transform: translateY(-39%) scale(1);
+  transform: translateY(-43%) scale(1);
 }
 
 .screen-guide .guide-list .bg {
   position: absolute;
+  height: 100%;
 }
 
-.screen-guide .guide-list .slick-track {
-  margin-top: 47px;
+.screen-guide .guide-list .slick-wrapper {
+  height: calc(100% + 100px);
+}
+
+.screen-guide .guide-list .slick-wrapper div {
+  height: 100%;
 }
 
 .screen-guide .guide-list .slide-box {
-  width: 270px;
-  text-align: center;
+  position: relative;
 }
 
 .screen-guide .guide-list .slide-cut img {
-  margin: 0 auto;
+  width: auto;
+  height: calc(100% - 100px);
 }
 
 .screen-guide .guide-list .slide-cut p {
-  position: relative;
-  top: -30px;
-  margin-top: 71px;
+  position: absolute;
+  top: calc(100% - 80px);
+  left: 0;
+  width: 100%;
+  margin-top: 16px;
   font-size: 17px;
   font-weight: normal;
   font-weight: 350;
@@ -506,11 +757,12 @@
   color: #fff;
   opacity: 0;
   transition: 0.3s ease;
+  text-align: center;
 }
 
 .screen-guide .guide-list .slick-current-on .slide-cut p {
-  top: 0;
   opacity: 1;
+  top: calc(100% - 100px);
 }
 
 .screen-guide .guide-list .slick-slide.slick-current {
@@ -550,7 +802,7 @@
 }
 
 .screen-guide .guide-list .slick-arrow::after {
-  display: "";
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -597,9 +849,26 @@
   .screen-guide .guide-list {
     left: 64%;
   }
+
+  .screen-guide .guide-list .slide-cut p {
+    font-size: 13px;
+  }
+
+  .screen-guide .guide-list .slick-current-on .slide-cut p {
+    top: calc(100% - 106px);
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  .screen-guide .guide-list .slide-cut p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-height: 1060px) {
+  .screen-guide .guide-list .slide-cut p {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 970px) {
@@ -616,47 +885,14 @@
   }
 
   .screen-guide .con-wrap {
-    /* flex-wrap: wrap; */
     padding-top: 140px;
     margin-bottom: 40px;
   }
 
-  .screen-guide .sec-copy {
-    width: 100%;
-  }
-
   .screen-guide .guide-list {
-    position: static;
-    width: 950px;
-    margin-left: 110px;
-    transform: translateY(0) scale(1.1);
-  }
-
-  .screen-guide.loaded .guide-list {
-    transform: translateY(0) scale(1);
-  }
-
-  .screen-guide .guide-list .bg {
-    height: 373px;
-  }
-
-  .screen-guide .guide-list .slick-track {
-    margin-top: 32px;
-  }
-
-  .screen-guide .guide-list .slide-box {
-    width: 187px;
-    padding: 0 9px;
-    box-sizing: border-box;
-  }
-
-  .screen-guide .guide-list .slide-cut img {
-    width: 100%;
-  }
-
-  .screen-guide .guide-list .slide-cut p {
-    margin-top: 61px;
-    font-size: 15px;
+    height: 38%;
+    left: 505px;
+    margin-left: 0;
   }
 }
 
@@ -680,15 +916,15 @@
   }
 
   .fp-section .con-wrap {
-    display: block;
     height: 100%;
   }
 
   .fp-section .sec-copy {
-    padding-top: 22.5vh;
+    width: 100%;
+    height: 60%;
   }
 
-  .intro {
+  .intro .bg-wrap {
     background-image: url("../images/main/m-bg-intro.png");
   }
 
@@ -699,7 +935,6 @@
 
   .intro .sec-copy {
     padding-left: 0;
-    padding-top: 22.5vh;
   }
 
   .intro .sec-copy em {
@@ -710,7 +945,7 @@
     max-width: 420px;
   }
 
-  .service {
+  .service .bg-wrap {
     background-image: url("../images/main/m-bg-service.png");
   }
 
@@ -719,7 +954,11 @@
   }
 
   .service .service-list {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
+    margin-top: 106px;
   }
 
   .service .service-list .slide-box img:last-child {
@@ -731,20 +970,43 @@
   }
 
   .service .service-list .slick-pagination {
+    right: 10%;
     bottom: 26%;
   }
 
-  .use-step .sec-copy {
-    margin-bottom: 114px;
+  .service .service-list .page-num {
+    font-size: 16px;
+  }
+
+  .service .service-list .page-num strong {
+    font-size: 20px;
+  }
+  
+  .service .service-list .page-num span {
+    font-size: 20px;
+  }
+
+  .service .service-list .btn-move {
+    display: none;
+  }
+  
+  .use-step .bg-wrap {
+    background-image: url("../images/main/m-bg-use-step.png");
   }
 
   .use-step .step {
-    width: 60%;
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    margin-top: 60px;
     padding-right: 0;
+    transform: translateY(-50%);
   }
-
+  
   .use-step .step ol {
+    width: 70%;
+    margin: 0 auto;
     flex-wrap: wrap;
   }
 
@@ -767,9 +1029,15 @@
   }
 
   .use-step .step ol + p {
-    margin-left: 0;
+    width: 70%;
+    margin: auto;
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 26px;
+    line-height: 3.5;
+  }
+
+  .screen-guide .bg-wrap {
+    background-image: url("../images/main/m-bg-screen-guide.png");
   }
 
   .screen-guide .con-wrap {
@@ -777,9 +1045,20 @@
   }
 
   .screen-guide .guide-list {
-    position: absolute;
-    left: 0;
-    margin-top: -70px;
+    left: 50%;
+    height: 44%;
+  }
+  
+  .loaded.screen-guide .guide-list {
+    transform: translate(-10%, -43%) scale(1);
+  }
+
+  .screen-guide .guide-list .slide-cut p {
+    font-size: 14px;
+  }
+
+  .fp-viewing-3 .scroll-arrow {
+    display: none;
   }
 }
 
@@ -788,16 +1067,26 @@
     display: none;
   }
 
-  .service .service-list .slide-box img:first-child {
-    bottom: -20px;
-  }
-
   .use-step .step {
     width: 100%;
   }
 
   .use-step .sec-copy {
     margin-bottom: 27px;
+  }
+
+  .screen-guide .guide-list .slick-arrow.slick-prev {
+    left: -6%;
+    transform: translateY(-10px);
+  }
+
+  .screen-guide .guide-list .slick-arrow.slick-next {
+    left: 22%;
+    transform: translateY(-10px);
+  }
+
+  .use-step .step ol + p {
+    font-size: 20px;
   }
 }
 
@@ -810,12 +1099,35 @@
     font-size: 3.1rem;
   }
 
+  .service .service-list {
+    margin-top: 76px;
+  }
+  
+  .service .service-list .btn-move button {
+    width: 30px;
+    height: 30px;
+  }
+
   .use-step .sec-copy em {
     font-size: 2.2rem;
   }
 
   .use-step .sec-copy strong {
     font-size: 3.1rem;
+  }
+
+  .use-step .step {
+    margin-top: 40px;
+  }
+
+  .use-step .step ol {
+    width: 90%;
+  }
+
+  .use-step .step ol + p {
+    width: 90%;
+    font-size: 16px;
+    border-radius: 15px;
   }
 
   .screen-guide .sec-copy strong {
@@ -826,35 +1138,21 @@
     font-size: 2.2rem;
   }
 
-  .service .service-list .btn-move button {
-    width: 30px;
-    height: 30px;
-  }
-
-  .screen-guide .guide-list {
-   left: 85px;
-   margin-left: 0;
-   margin-top: -120px;
-  }
-
   .screen-guide .guide-list .slick-arrow {
     width: 40px;
     height: 40px;
     top: 35%;
   }
 
-  .screen-guide .guide-list .bg {
-    height: 320px;
+  .screen-guide .guide-list .slide-cut p {
+    word-wrap: break-word;
+    word-break: keep-all;
   }
 
-  .screen-guide .guide-list .slick-track {
-    margin-top: 27px;
+  .screen-guide .guide-list .slide-cut p br {
+    display: none;
   }
 
-  .screen-guide .guide-list .slide-box {
-    width: 161px;
-    padding: 0 8px;
-  }
 }
 
 @media screen and (max-width: 320px) {

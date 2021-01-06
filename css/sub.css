@@ -1770,9 +1770,23 @@ td.offer-con {
   }
 
   .prev-slide .slick-wrapper {
-    width: 149px;
-    height: 298px;
-    padding: 26px 7px 33px;
+    width: 168px;
+    height: 338px;
+    padding: 29px 7px 37px;
+  }
+
+  .prev-slide .slick-wrapper .slick-arrow {
+    width: 44px;
+    height: 70px;
+    margin-top: -35px;
+  }
+
+  .prev-slide .slick-wrapper .slick-next {
+    right: -55px;
+  }
+
+  .prev-slide .slick-wrapper .slick-prev {
+    left: -55px;
   }
 
   .tab-title .input-rdo input[type="radio"]:checked + label::before {
