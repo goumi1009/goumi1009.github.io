@@ -342,6 +342,8 @@
 }
 
 .board-write .form-row textarea {
+  text-indent: 0;
+  padding: 15px;
   height: 242px;
 }
 
@@ -1028,11 +1030,15 @@ td.tab-con-wrap {
   margin-bottom: 30px;
   font-size: 16px;
   color: #777;
+  word-wrap: break-word;
+  word-break: keep-all;
 }
 
 .contents-wrap .answer-box {
   margin-top: 30px;
   border-bottom: 0;
+  word-wrap: break-word;
+  word-break: keep-all;
 }
 
 .contents-wrap .answer-box::before {
@@ -1909,18 +1915,30 @@ td.offer-con {
   }
 
   .grid-box-wrap .grid-box {
-    min-height: 160px;
+    min-height: 190px;
     padding: 20px;
     margin-bottom: 15px;
   }
 
   .grid-box-wrap .grid-box .title {
     padding-bottom: 10px;
-    font-size: 21px;
-  } 
+    font-size: 20px;
+  }
+
+  .grid-box-wrap .grid-box .title h3 {
+    padding-bottom: 5px;
+  }
+
+  .grid-box-wrap .grid-box .title p {
+    font-size: 12px;
+  }
 
   .grid-box-wrap .grid-con p {
     font-size: 16px;
+  }
+
+  .grid-box-wrap .grid-box .grid-con dl {
+    margin-bottom: 6px;
   }
 
   .grid-box-wrap .grid-box .grid-con .major-txt {
@@ -1932,13 +1950,6 @@ td.offer-con {
     font-size: 14px;
   }
 
-  .grid-box-wrap .grid-box .title h3 {
-    padding-bottom: 5px;
-  }
-
-  .grid-box-wrap .grid-box .title p {
-    font-size: 12px;
-  }
 
   .grid-box-wrap .grid-box .grid-con dt {
     font-size: 13px;
@@ -1963,7 +1974,7 @@ td.offer-con {
   }
 
   .accordion-box .ac-title span:nth-child(2) {
-    margin-right: 12px;
+    margin-right: 8px;
   }
   
   .accordion-box .ac-title::after {
@@ -1999,6 +2010,54 @@ td.offer-con {
 
   .empty-list p strong {
     font-size: 18px;
+  }
+
+  .board-list .grid-box .title {
+    margin-top: 4px;
+  }
+
+  .board-list .grid-box .file::before {
+    width: 37px;
+    height: 37px;
+  }
+
+  .board-list .grid-box .grid-con {
+    margin-bottom: 10px;
+  }
+
+  .contents-wrap .question-box::before, 
+  .contents-wrap .answer-box::before {
+    font-size: 28px;
+  }
+
+  .contents-wrap .question-box, 
+  .contents-wrap .answer-box {
+    padding-left: 30px;
+    padding-bottom: 20px;
+  }
+
+  .contents-wrap .question-box .txt {
+    margin-bottom: 20px;
+  }
+
+  .contents-wrap .answer-box {
+    margin-top: 20px;
+    padding-bottom: 0;
+  }
+
+  .board-write .attach-file {
+    padding-top: 0;
+    font-size: 12px;
+  }
+  .board-write .attach-file label {
+    width: 100px;
+    min-width: 100px;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .contents .txt-wraning {
+    margin-bottom: 4px;
   }
 
 }
