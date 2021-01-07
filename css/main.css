@@ -727,6 +727,7 @@
 .screen-guide .guide-list .bg {
   position: absolute;
   height: 100%;
+  z-index: 10;
 }
 
 .screen-guide .guide-list .slick-wrapper {
@@ -766,6 +767,7 @@
   opacity: 1;
   top: calc(100% - 100px);
 }
+
 
 .screen-guide .guide-list .slick-slide.slick-current {
   opacity: 1;
@@ -1050,13 +1052,33 @@
     left: 50%;
     height: 44%;
   }
+
+  .screen-guide .guide-list .slick-list {
+    overflow: visible;
+  }
   
   .loaded.screen-guide .guide-list {
     transform: translate(-10%, -43%) scale(1);
   }
 
   .screen-guide .guide-list .slide-cut p {
+    left: -25%;
+    width: 150%;
     font-size: 14px;
+  }
+
+  .screen-guide .guide-list .slick-arrow {
+    z-index: 10;
+  }
+  
+  .screen-guide .guide-list .slick-arrow.slick-prev {
+    left: -70px;
+    transform: translateY(-10px);
+  }
+
+  .screen-guide .guide-list .slick-arrow.slick-next {
+    left: calc(20% + 20px);
+    transform: translateY(-10px);
   }
 
   .fp-viewing-3 .scroll-arrow {
@@ -1077,22 +1099,35 @@
     margin-bottom: 27px;
   }
 
-  .screen-guide .guide-list .slick-arrow.slick-prev {
-    left: -6%;
-    transform: translateY(-10px);
-  }
-
-  .screen-guide .guide-list .slick-arrow.slick-next {
-    left: 22%;
-    transform: translateY(-10px);
-  }
-
   .use-step .step ol + p {
     font-size: 20px;
   }
+
+  .screen-guide .guide-list .slick-list {
+    overflow: visible;
+  }
+
+
 }
 
 @media screen and (max-width: 480px) {
+  .scroll-arrow {
+    bottom: 32px;
+    margin-left: -9px;
+  }
+
+  .scroll-arrow .arrow {
+    width: 18px;
+    height: 10px;
+    animation-duration: 3s;
+    margin-top: -2px;
+    background-size: contain;
+  }
+
+  .intro .sec-copy em::after {
+    bottom: -7px;
+  }
+  
   .intro .sec-copy h2 {
     font-size: 4.3rem;
   }

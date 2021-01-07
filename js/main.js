@@ -2,6 +2,53 @@
 $(window).on('load', function(){
   $('.intro').addClass('loaded');
   $('.guide-list').width($('.guide-list .bg').width() * 5);
+  
+  //intro 뒷배경 흩날리는 동그라미
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 6, density: { enable: true, value_area: 800 } },
+      color: { value: "#fff" },
+      shape: {
+        type: "circle",
+        stroke: { width: 0}
+      },
+      opacity: {
+        value: 0.1,
+        random: true,
+        anim: { enable: false, speed: 20, opacity_min: 0.1, sync: false }
+      },
+      size: {
+        value: 100,
+        random: true,
+        anim: { enable: true, speed: 1, size_min: 40, sync: false }
+      },
+      line_linked: {
+        enable: false,
+      },
+      move: {
+        enable: true,
+        speed: 3,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+        attract: { enable: false, rotateX: 600, rotateY: 1200 }
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { 
+          enable: false, 
+        },
+        onclick: { 
+          enable: false, 
+        },
+        resize: true
+      }
+    },
+  });
 });
 
 $(document).ready(function () {
@@ -68,52 +115,5 @@ $(document).ready(function () {
     var idx = $(this).parents('.fp-section').index();
     $.fn.fullpage.moveTo(idx + 2);
   })
-
-  //intro 뒷배경 흩날리는 동그라미
-  particlesJS("particles-js", {
-    particles: {
-      number: { value: 6, density: { enable: true, value_area: 800 } },
-      color: { value: "#fff" },
-      shape: {
-        type: "circle",
-        stroke: { width: 0}
-      },
-      opacity: {
-        value: 0.1,
-        random: true,
-        anim: { enable: false, speed: 20, opacity_min: 0.1, sync: false }
-      },
-      size: {
-        value: 100,
-        random: true,
-        anim: { enable: true, speed: 1, size_min: 40, sync: false }
-      },
-      line_linked: {
-        enable: false,
-      },
-      move: {
-        enable: true,
-        speed: 3,
-        direction: "none",
-        random: false,
-        straight: false,
-        out_mode: "out",
-        bounce: false,
-        attract: { enable: false, rotateX: 600, rotateY: 1200 }
-      }
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: { 
-          enable: false, 
-        },
-        onclick: { 
-          enable: false, 
-        },
-        resize: true
-      }
-    },
-  });
 
 });

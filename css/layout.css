@@ -295,6 +295,10 @@ body,
   transform: rotate(-45deg);
 }
 
+.pop-wrap {
+  overflow: auto;
+}
+
 .pop-wrap .popup .text-box {
   overflow: auto;
   height: 100%;
@@ -348,7 +352,7 @@ body,
 .prev-slide .slick-wrapper {
   width: 313px;
   height: 630px;
-  padding: 55px 15px 71px;
+  padding: 55px 14px 71px;
   background: url("../images/sub/bg-prev-slide.png") no-repeat top center;
   background-size: contain;
   box-sizing: border-box;
@@ -734,9 +738,9 @@ a.btn {
   }
 
   .prev-slide .slick-wrapper {
-    width: 209px;
-    height: 420px;
-    padding: 36px 9px 47px;
+    width: 263px;
+    height: 530px;
+    padding: 46px 12px 61px;
   }
 
   .prev-slide .btn-close-pop {
@@ -763,6 +767,11 @@ a.btn {
 
   .header .hd-gnb .hd-util li {
     width: 120px;
+  }
+
+  .pop-wrap .popup .text-box {
+    padding-right: 0;
+    margin-right: 0;
   }
 }
 
@@ -1105,19 +1114,33 @@ a.btn {
   }
 
   .pop-wrap .popup {
-    padding: 30px;
+    padding: 20px;
   }
 
   .pop-wrap .popup .title {
-    margin-bottom: 17px;
+    margin-bottom: 30px;
   }
 
   .pop-wrap .popup .title h2 {
     font-size: 20px;
   }
 
+  .btn-close-pop {
+    top: -4px;
+  }
+
   .pop-wrap .popup .text-box {
     margin-right: 0;
+  }
+
+  .prev-slide .slick-wrapper {
+    width: 248px;
+    height: 500px;
+    padding: 43px 11px 57px;
+  }
+
+  .prev-slide .btn-close-pop {
+    margin-top: 15px;
   }
 
   .file {
