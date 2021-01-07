@@ -685,6 +685,7 @@ td.tab-con-wrap {
   margin-bottom: 10px;
   border: 1px solid #d8d8d8;
   border-radius: 3px;
+  background: #fff;
   box-sizing: border-box;
 }
 
@@ -1293,6 +1294,10 @@ td.offer-con {
 }
 
 @media screen and (max-width: 768px) {
+  body.page-form {
+    background: #f7f7f7
+  }
+
   .sub-wrap .header.active ~ .container {
     padding-top: 62px;
   }
@@ -1396,7 +1401,11 @@ td.offer-con {
   }
 
   .form-table td .col-md-12:first-child {
-    margin-top: 00;
+    margin-top: 0;
+  }
+
+  .form-table td .col-md-12 + .btn {
+    margin-left: 5px;
   }
 
   .user-find .form-box {
@@ -1458,8 +1467,9 @@ td.offer-con {
   .form-table .acc-row {
     flex-wrap: wrap;
   }
-
+  
   .form-table .acc-row .col-md-8 {
+    width: calc(66.666% - 2.5px);
     margin-right: 0;
   }
 
@@ -1487,7 +1497,6 @@ td.offer-con {
 
   .form-table .add-dle-acc .col-md-12 {
     width: calc(100% - 115px);
-    margin-right: 5px;
   }
 
   .form-table .add-dle-acc .acc-row:first-child .col-md-12 {
@@ -1496,7 +1505,7 @@ td.offer-con {
   }
 
   .skin-set .form-table tr {
-    border-bottom: 1px solid #dadada;
+    border-bottom: 0;
   }
 
   .skin-set .form-table tr:last-child {
@@ -1513,7 +1522,7 @@ td.offer-con {
 
   .skin-set .form-table td {
     padding-top: 0;
-    padding-bottom: 36px;
+    padding-bottom: 0;
   }
 
   .skin-set .rdo-vtc label {
@@ -1574,8 +1583,9 @@ td.offer-con {
   }
 
   .contents-wrap .contents {
-    margin-bottom: 30px;
+    margin-bottom: 46px;
   }
+
   td.offer-title {
     padding: 0;
   }
@@ -1750,7 +1760,7 @@ td.offer-con {
   }
 
   .login-wrap .form-box .box-foot .btn {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .form-row {
@@ -1912,10 +1922,6 @@ td.offer-con {
     width: calc(100% - 85px);
   }
 
-  .form-table .add-dle-acc .col-md-8 {
-    width: calc(66.666% - 2.5px);
-  }
-
   .attach-img + p strong,
   .attach-img + p em {
     font-size: 14px;
@@ -1945,6 +1951,7 @@ td.offer-con {
   .grid-box-wrap .grid-box .title p {
     font-size: 12px;
   }
+
 
   .grid-box-wrap .grid-con p {
     font-size: 16px;
@@ -2017,6 +2024,16 @@ td.offer-con {
     height: 2.8em;
     font-size: 15px;
   }
+  
+  .contents-wrap .question-box .title {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+  
+  .contents-wrap .question-box .txt,
+  .contents-wrap .answer-box .txt {
+    font-size: 14px;
+  }
 
   .empty-list {
     padding-top: 55px;
@@ -2079,10 +2096,13 @@ td.offer-con {
     font-size: 14px;
   }
 
-  .contents .txt-wraning {
-    margin-bottom: 4px;
+  .skin-set .form-table th {
+    padding-bottom: 10px;
   }
 
+  .form-table td .txt-info {
+    margin-top: 5px;
+  }
 }
 
 @media screen and (max-width: 320px) {

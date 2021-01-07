@@ -524,6 +524,7 @@ textarea[disabled] {
   height: 22px;
   border-radius: 50%;
   border: 1px solid #d3d3d3;
+  background: #fff;
   top: 50%;
   left: 0;
   margin-top: -11px;
