@@ -109,8 +109,8 @@
     $('.btn-vlarger').on('click', function () {
       var viewImg = $(this).siblings('img').clone();
       var viewDiv = '<div class="view-box-wrap">\
+                      <button class="view-close">닫기</button>\
                       <div class="view-box">\
-                        <button class="view-close">닫기</button>\
                       </div>\
                     </div>';
       $('body').append(viewDiv).addClass('no-scroll');
