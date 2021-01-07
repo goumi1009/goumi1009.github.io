@@ -8,15 +8,16 @@ body,
   min-height: 100%;
 }
 
-.fp-back {
+.wrap {
+  padding-top: 81px;
+}
+
+.wrap.fp-back {
+  padding-top: 0;
   overflow: hidden;
   position: relative;
   background-size: cover;
   background-position: center;
-}
-
-.wrap {
-  padding-top: 81px;
 }
 
 /* ------ header ------  */
